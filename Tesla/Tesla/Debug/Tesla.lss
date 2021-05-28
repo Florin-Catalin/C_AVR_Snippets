@@ -1,0 +1,3507 @@
+
+Tesla.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800200  00800200  0000113c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         000010e8  00000000  00000000  00000054  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .comment      00000030  00000000  00000000  0000113c  2**0
+                  CONTENTS, READONLY
+  3 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  0000116c  2**2
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000040  00000000  00000000  000011ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   000010b8  00000000  00000000  000011ec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 00000cb1  00000000  00000000  000022a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000f8b  00000000  00000000  00002f55  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  00000070  00000000  00000000  00003ee0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    000005e7  00000000  00000000  00003f50  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    000003e0  00000000  00000000  00004537  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000030  00000000  00000000  00004917  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	13 c1       	rjmp	.+550    	; 0x228 <__ctors_end>
+       2:	00 00       	nop
+       4:	1b c1       	rjmp	.+566    	; 0x23c <__bad_interrupt>
+       6:	00 00       	nop
+       8:	19 c1       	rjmp	.+562    	; 0x23c <__bad_interrupt>
+       a:	00 00       	nop
+       c:	17 c1       	rjmp	.+558    	; 0x23c <__bad_interrupt>
+       e:	00 00       	nop
+      10:	15 c1       	rjmp	.+554    	; 0x23c <__bad_interrupt>
+      12:	00 00       	nop
+      14:	13 c1       	rjmp	.+550    	; 0x23c <__bad_interrupt>
+      16:	00 00       	nop
+      18:	11 c1       	rjmp	.+546    	; 0x23c <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	0f c1       	rjmp	.+542    	; 0x23c <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	0d c1       	rjmp	.+538    	; 0x23c <__bad_interrupt>
+      22:	00 00       	nop
+      24:	0b c1       	rjmp	.+534    	; 0x23c <__bad_interrupt>
+      26:	00 00       	nop
+      28:	09 c1       	rjmp	.+530    	; 0x23c <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	07 c1       	rjmp	.+526    	; 0x23c <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	05 c1       	rjmp	.+522    	; 0x23c <__bad_interrupt>
+      32:	00 00       	nop
+      34:	03 c1       	rjmp	.+518    	; 0x23c <__bad_interrupt>
+      36:	00 00       	nop
+      38:	01 c1       	rjmp	.+514    	; 0x23c <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	ff c0       	rjmp	.+510    	; 0x23c <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	fd c0       	rjmp	.+506    	; 0x23c <__bad_interrupt>
+      42:	00 00       	nop
+      44:	fb c0       	rjmp	.+502    	; 0x23c <__bad_interrupt>
+      46:	00 00       	nop
+      48:	f9 c0       	rjmp	.+498    	; 0x23c <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	f7 c0       	rjmp	.+494    	; 0x23c <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	f5 c0       	rjmp	.+490    	; 0x23c <__bad_interrupt>
+      52:	00 00       	nop
+      54:	f3 c0       	rjmp	.+486    	; 0x23c <__bad_interrupt>
+      56:	00 00       	nop
+      58:	f1 c0       	rjmp	.+482    	; 0x23c <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	ef c0       	rjmp	.+478    	; 0x23c <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	ed c0       	rjmp	.+474    	; 0x23c <__bad_interrupt>
+      62:	00 00       	nop
+      64:	eb c0       	rjmp	.+470    	; 0x23c <__bad_interrupt>
+      66:	00 00       	nop
+      68:	e9 c0       	rjmp	.+466    	; 0x23c <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	e7 c0       	rjmp	.+462    	; 0x23c <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	e5 c0       	rjmp	.+458    	; 0x23c <__bad_interrupt>
+      72:	00 00       	nop
+      74:	e3 c0       	rjmp	.+454    	; 0x23c <__bad_interrupt>
+      76:	00 00       	nop
+      78:	e1 c0       	rjmp	.+450    	; 0x23c <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	df c0       	rjmp	.+446    	; 0x23c <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	dd c0       	rjmp	.+442    	; 0x23c <__bad_interrupt>
+      82:	00 00       	nop
+      84:	db c0       	rjmp	.+438    	; 0x23c <__bad_interrupt>
+      86:	00 00       	nop
+      88:	d9 c0       	rjmp	.+434    	; 0x23c <__bad_interrupt>
+      8a:	00 00       	nop
+      8c:	d7 c0       	rjmp	.+430    	; 0x23c <__bad_interrupt>
+      8e:	00 00       	nop
+      90:	d5 c0       	rjmp	.+426    	; 0x23c <__bad_interrupt>
+      92:	00 00       	nop
+      94:	d3 c0       	rjmp	.+422    	; 0x23c <__bad_interrupt>
+      96:	00 00       	nop
+      98:	d1 c0       	rjmp	.+418    	; 0x23c <__bad_interrupt>
+      9a:	00 00       	nop
+      9c:	cf c0       	rjmp	.+414    	; 0x23c <__bad_interrupt>
+      9e:	00 00       	nop
+      a0:	cd c0       	rjmp	.+410    	; 0x23c <__bad_interrupt>
+      a2:	00 00       	nop
+      a4:	cb c0       	rjmp	.+406    	; 0x23c <__bad_interrupt>
+      a6:	00 00       	nop
+      a8:	c9 c0       	rjmp	.+402    	; 0x23c <__bad_interrupt>
+      aa:	00 00       	nop
+      ac:	c7 c0       	rjmp	.+398    	; 0x23c <__bad_interrupt>
+      ae:	00 00       	nop
+      b0:	c5 c0       	rjmp	.+394    	; 0x23c <__bad_interrupt>
+      b2:	00 00       	nop
+      b4:	c3 c0       	rjmp	.+390    	; 0x23c <__bad_interrupt>
+      b6:	00 00       	nop
+      b8:	c1 c0       	rjmp	.+386    	; 0x23c <__bad_interrupt>
+      ba:	00 00       	nop
+      bc:	bf c0       	rjmp	.+382    	; 0x23c <__bad_interrupt>
+      be:	00 00       	nop
+      c0:	bd c0       	rjmp	.+378    	; 0x23c <__bad_interrupt>
+      c2:	00 00       	nop
+      c4:	bb c0       	rjmp	.+374    	; 0x23c <__bad_interrupt>
+      c6:	00 00       	nop
+      c8:	b9 c0       	rjmp	.+370    	; 0x23c <__bad_interrupt>
+      ca:	00 00       	nop
+      cc:	b7 c0       	rjmp	.+366    	; 0x23c <__bad_interrupt>
+      ce:	00 00       	nop
+      d0:	b5 c0       	rjmp	.+362    	; 0x23c <__bad_interrupt>
+      d2:	00 00       	nop
+      d4:	b3 c0       	rjmp	.+358    	; 0x23c <__bad_interrupt>
+      d6:	00 00       	nop
+      d8:	b1 c0       	rjmp	.+354    	; 0x23c <__bad_interrupt>
+      da:	00 00       	nop
+      dc:	af c0       	rjmp	.+350    	; 0x23c <__bad_interrupt>
+      de:	00 00       	nop
+      e0:	ad c0       	rjmp	.+346    	; 0x23c <__bad_interrupt>
+      e2:	00 00       	nop
+      e4:	2a 01       	movw	r4, r20
+      e6:	37 01       	movw	r6, r14
+      e8:	44 01       	movw	r8, r8
+      ea:	51 01       	movw	r10, r2
+      ec:	5e 01       	movw	r10, r28
+      ee:	6b 01       	movw	r12, r22
+      f0:	78 01       	movw	r14, r16
+      f2:	89 01       	movw	r16, r18
+      f4:	9a 01       	movw	r18, r20
+      f6:	ab 01       	movw	r20, r22
+      f8:	bc 01       	movw	r22, r24
+      fa:	c9 01       	movw	r24, r18
+      fc:	d6 01       	movw	r26, r12
+      fe:	e3 01       	movw	r28, r6
+     100:	f0 01       	movw	r30, r0
+     102:	01 02       	muls	r16, r17
+     104:	12 02       	muls	r17, r18
+     106:	23 02       	muls	r18, r19
+     108:	34 02       	muls	r19, r20
+     10a:	41 02       	muls	r20, r17
+     10c:	4e 02       	muls	r20, r30
+     10e:	5b 02       	muls	r21, r27
+     110:	68 02       	muls	r22, r24
+     112:	75 02       	muls	r23, r21
+     114:	82 02       	muls	r24, r18
+     116:	8f 02       	muls	r24, r31
+     118:	9c 02       	muls	r25, r28
+     11a:	a9 02       	muls	r26, r25
+     11c:	b6 02       	muls	r27, r22
+     11e:	c3 02       	muls	r28, r19
+     120:	d0 02       	muls	r29, r16
+     122:	dd 02       	muls	r29, r29
+     124:	ea 02       	muls	r30, r26
+     126:	f7 02       	muls	r31, r23
+     128:	04 03       	mulsu	r16, r20
+     12a:	11 03       	mulsu	r17, r17
+     12c:	1e 03       	fmul	r17, r22
+     12e:	2b 03       	fmul	r18, r19
+     130:	38 03       	fmul	r19, r16
+     132:	45 03       	mulsu	r20, r21
+     134:	52 03       	mulsu	r21, r18
+     136:	5f 03       	fmul	r21, r23
+     138:	6c 03       	fmul	r22, r20
+     13a:	7d 03       	fmul	r23, r21
+     13c:	8e 03       	fmulsu	r16, r22
+     13e:	9f 03       	fmulsu	r17, r23
+     140:	b0 03       	fmuls	r19, r16
+     142:	c1 03       	fmuls	r20, r17
+     144:	d2 03       	fmuls	r21, r18
+     146:	e3 03       	fmuls	r22, r19
+     148:	f3 03       	fmuls	r23, r19
+     14a:	ff 03       	fmulsu	r23, r23
+     14c:	0b 04       	cpc	r0, r11
+     14e:	17 04       	cpc	r1, r7
+     150:	2e 04       	cpc	r2, r14
+     152:	3b 04       	cpc	r3, r11
+     154:	48 04       	cpc	r4, r8
+     156:	55 04       	cpc	r5, r5
+     158:	62 04       	cpc	r6, r2
+     15a:	6f 04       	cpc	r6, r15
+     15c:	7c 04       	cpc	r7, r12
+     15e:	8d 04       	cpc	r8, r13
+     160:	9e 04       	cpc	r9, r14
+     162:	af 04       	cpc	r10, r15
+     164:	c0 04       	cpc	r12, r0
+     166:	cd 04       	cpc	r12, r13
+     168:	da 04       	cpc	r13, r10
+     16a:	e7 04       	cpc	r14, r7
+     16c:	f4 04       	cpc	r15, r4
+     16e:	05 05       	cpc	r16, r5
+     170:	16 05       	cpc	r17, r6
+     172:	27 05       	cpc	r18, r7
+     174:	38 05       	cpc	r19, r8
+     176:	45 05       	cpc	r20, r5
+     178:	52 05       	cpc	r21, r2
+     17a:	5f 05       	cpc	r21, r15
+     17c:	6c 05       	cpc	r22, r12
+     17e:	79 05       	cpc	r23, r9
+     180:	86 05       	cpc	r24, r6
+     182:	93 05       	cpc	r25, r3
+     184:	a0 05       	cpc	r26, r0
+     186:	ad 05       	cpc	r26, r13
+     188:	ba 05       	cpc	r27, r10
+     18a:	c7 05       	cpc	r28, r7
+     18c:	d4 05       	cpc	r29, r4
+     18e:	e1 05       	cpc	r30, r1
+     190:	ee 05       	cpc	r30, r14
+     192:	fb 05       	cpc	r31, r11
+     194:	08 06       	cpc	r0, r24
+     196:	15 06       	cpc	r1, r21
+     198:	22 06       	cpc	r2, r18
+     19a:	2f 06       	cpc	r2, r31
+     19c:	3c 06       	cpc	r3, r28
+     19e:	49 06       	cpc	r4, r25
+     1a0:	56 06       	cpc	r5, r22
+     1a2:	63 06       	cpc	r6, r19
+     1a4:	70 06       	cpc	r7, r16
+     1a6:	81 06       	cpc	r8, r17
+     1a8:	92 06       	cpc	r9, r18
+     1aa:	a3 06       	cpc	r10, r19
+     1ac:	b4 06       	cpc	r11, r20
+     1ae:	c5 06       	cpc	r12, r21
+     1b0:	d6 06       	cpc	r13, r22
+     1b2:	e7 06       	cpc	r14, r23
+     1b4:	f7 06       	cpc	r15, r23
+     1b6:	03 07       	cpc	r16, r19
+     1b8:	0f 07       	cpc	r16, r31
+     1ba:	1b 07       	cpc	r17, r27
+     1bc:	32 07       	cpc	r19, r18
+     1be:	35 07       	cpc	r19, r21
+     1c0:	38 07       	cpc	r19, r24
+     1c2:	3b 07       	cpc	r19, r27
+     1c4:	3e 07       	cpc	r19, r30
+     1c6:	41 07       	cpc	r20, r17
+     1c8:	44 07       	cpc	r20, r20
+     1ca:	48 07       	cpc	r20, r24
+     1cc:	4c 07       	cpc	r20, r28
+     1ce:	50 07       	cpc	r21, r16
+     1d0:	54 07       	cpc	r21, r20
+     1d2:	57 07       	cpc	r21, r23
+     1d4:	5a 07       	cpc	r21, r26
+     1d6:	5d 07       	cpc	r21, r29
+     1d8:	60 07       	cpc	r22, r16
+     1da:	64 07       	cpc	r22, r20
+     1dc:	68 07       	cpc	r22, r24
+     1de:	6c 07       	cpc	r22, r28
+     1e0:	70 07       	cpc	r23, r16
+     1e2:	73 07       	cpc	r23, r19
+     1e4:	76 07       	cpc	r23, r22
+     1e6:	79 07       	cpc	r23, r25
+     1e8:	7c 07       	cpc	r23, r28
+     1ea:	7f 07       	cpc	r23, r31
+     1ec:	82 07       	cpc	r24, r18
+     1ee:	85 07       	cpc	r24, r21
+     1f0:	88 07       	cpc	r24, r24
+     1f2:	8b 07       	cpc	r24, r27
+     1f4:	8e 07       	cpc	r24, r30
+     1f6:	91 07       	cpc	r25, r17
+     1f8:	94 07       	cpc	r25, r20
+     1fa:	97 07       	cpc	r25, r23
+     1fc:	9a 07       	cpc	r25, r26
+     1fe:	9d 07       	cpc	r25, r29
+     200:	a0 07       	cpc	r26, r16
+     202:	a3 07       	cpc	r26, r19
+     204:	a6 07       	cpc	r26, r22
+     206:	a9 07       	cpc	r26, r25
+     208:	ac 07       	cpc	r26, r28
+     20a:	af 07       	cpc	r26, r31
+     20c:	b2 07       	cpc	r27, r18
+     20e:	b5 07       	cpc	r27, r21
+     210:	b8 07       	cpc	r27, r24
+     212:	bc 07       	cpc	r27, r28
+     214:	c0 07       	cpc	r28, r16
+     216:	c3 07       	cpc	r28, r19
+     218:	c7 07       	cpc	r28, r23
+     21a:	cb 07       	cpc	r28, r27
+     21c:	cf 07       	cpc	r28, r31
+     21e:	d3 07       	cpc	r29, r19
+     220:	d7 07       	cpc	r29, r23
+     222:	da 07       	cpc	r29, r26
+     224:	dd 07       	cpc	r29, r29
+     226:	e0 07       	cpc	r30, r16
+
+00000228 <__ctors_end>:
+     228:	11 24       	eor	r1, r1
+     22a:	1f be       	out	0x3f, r1	; 63
+     22c:	cf ef       	ldi	r28, 0xFF	; 255
+     22e:	d1 e2       	ldi	r29, 0x21	; 33
+     230:	de bf       	out	0x3e, r29	; 62
+     232:	cd bf       	out	0x3d, r28	; 61
+     234:	00 e0       	ldi	r16, 0x00	; 0
+     236:	0c bf       	out	0x3c, r16	; 60
+     238:	48 d7       	rcall	.+3728   	; 0x10ca <main>
+     23a:	54 c7       	rjmp	.+3752   	; 0x10e4 <_exit>
+
+0000023c <__bad_interrupt>:
+     23c:	e1 ce       	rjmp	.-574    	; 0x0 <__vectors>
+
+0000023e <gpio_vPinMode>:
+
+#include <avr/io.h>
+#include <util/delay.h> 
+
+void gpio_vPinMode(uint8_t u8Pin, uint8_t u8Mode){
+	switch(u8Pin){
+     23e:	90 e0       	ldi	r25, 0x00	; 0
+     240:	86 33       	cpi	r24, 0x36	; 54
+     242:	91 05       	cpc	r25, r1
+     244:	08 f0       	brcs	.+2      	; 0x248 <gpio_vPinMode+0xa>
+     246:	fe c2       	rjmp	.+1532   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+     248:	fc 01       	movw	r30, r24
+     24a:	88 27       	eor	r24, r24
+     24c:	ee 58       	subi	r30, 0x8E	; 142
+     24e:	ff 4f       	sbci	r31, 0xFF	; 255
+     250:	8f 4f       	sbci	r24, 0xFF	; 255
+     252:	40 c7       	rjmp	.+3712   	; 0x10d4 <__tablejump2__>
+		//set pin0
+		case 0 :
+		if(u8Mode == 0)
+     254:	61 11       	cpse	r22, r1
+     256:	04 c0       	rjmp	.+8      	; 0x260 <gpio_vPinMode+0x22>
+			DDRE &= ~(1 << PE0); 
+     258:	8d b1       	in	r24, 0x0d	; 13
+     25a:	8e 7f       	andi	r24, 0xFE	; 254
+     25c:	8d b9       	out	0x0d, r24	; 13
+     25e:	08 95       	ret
+		else if(u8Mode == 1)
+     260:	61 30       	cpi	r22, 0x01	; 1
+     262:	09 f0       	breq	.+2      	; 0x266 <gpio_vPinMode+0x28>
+     264:	ef c2       	rjmp	.+1502   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRE |= (1 << PE0);
+     266:	8d b1       	in	r24, 0x0d	; 13
+     268:	81 60       	ori	r24, 0x01	; 1
+     26a:	8d b9       	out	0x0d, r24	; 13
+     26c:	08 95       	ret
+			break;
+		break;
+			
+		//set pin1
+		case 1 :
+		if(u8Mode == 0)
+     26e:	61 11       	cpse	r22, r1
+     270:	04 c0       	rjmp	.+8      	; 0x27a <gpio_vPinMode+0x3c>
+			DDRE &= ~(1 << PE1);
+     272:	8d b1       	in	r24, 0x0d	; 13
+     274:	8d 7f       	andi	r24, 0xFD	; 253
+     276:	8d b9       	out	0x0d, r24	; 13
+     278:	08 95       	ret
+		else if(u8Mode == 1)
+     27a:	61 30       	cpi	r22, 0x01	; 1
+     27c:	09 f0       	breq	.+2      	; 0x280 <gpio_vPinMode+0x42>
+     27e:	e2 c2       	rjmp	.+1476   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRE |= (1 << PE1);
+     280:	8d b1       	in	r24, 0x0d	; 13
+     282:	82 60       	ori	r24, 0x02	; 2
+     284:	8d b9       	out	0x0d, r24	; 13
+     286:	08 95       	ret
+			break;
+		break;
+		
+		//set pin2	
+		case 2 :
+		if(u8Mode == 0)
+     288:	61 11       	cpse	r22, r1
+     28a:	04 c0       	rjmp	.+8      	; 0x294 <gpio_vPinMode+0x56>
+			DDRE &= ~(1 << PE4);
+     28c:	8d b1       	in	r24, 0x0d	; 13
+     28e:	8f 7e       	andi	r24, 0xEF	; 239
+     290:	8d b9       	out	0x0d, r24	; 13
+     292:	08 95       	ret
+		else if(u8Mode == 1)
+     294:	61 30       	cpi	r22, 0x01	; 1
+     296:	09 f0       	breq	.+2      	; 0x29a <gpio_vPinMode+0x5c>
+     298:	d5 c2       	rjmp	.+1450   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRE |= (1 << PE4);
+     29a:	8d b1       	in	r24, 0x0d	; 13
+     29c:	80 61       	ori	r24, 0x10	; 16
+     29e:	8d b9       	out	0x0d, r24	; 13
+     2a0:	08 95       	ret
+			break;
+		break;
+		
+		//set pin3	
+		case 3 :
+		if(u8Mode == 0)
+     2a2:	61 11       	cpse	r22, r1
+     2a4:	04 c0       	rjmp	.+8      	; 0x2ae <gpio_vPinMode+0x70>
+			DDRE &= ~(1 << PE5);
+     2a6:	8d b1       	in	r24, 0x0d	; 13
+     2a8:	8f 7d       	andi	r24, 0xDF	; 223
+     2aa:	8d b9       	out	0x0d, r24	; 13
+     2ac:	08 95       	ret
+		else if(u8Mode == 1)
+     2ae:	61 30       	cpi	r22, 0x01	; 1
+     2b0:	09 f0       	breq	.+2      	; 0x2b4 <gpio_vPinMode+0x76>
+     2b2:	c8 c2       	rjmp	.+1424   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRE |= (1 << PE5);
+     2b4:	8d b1       	in	r24, 0x0d	; 13
+     2b6:	80 62       	ori	r24, 0x20	; 32
+     2b8:	8d b9       	out	0x0d, r24	; 13
+     2ba:	08 95       	ret
+			break;
+		break;
+		
+		//set pin4	
+		case 4 :
+		if(u8Mode == 0)
+     2bc:	61 11       	cpse	r22, r1
+     2be:	04 c0       	rjmp	.+8      	; 0x2c8 <gpio_vPinMode+0x8a>
+			DDRG &= ~(1 << PG5);
+     2c0:	83 b3       	in	r24, 0x13	; 19
+     2c2:	8f 7d       	andi	r24, 0xDF	; 223
+     2c4:	83 bb       	out	0x13, r24	; 19
+     2c6:	08 95       	ret
+		else if(u8Mode == 1)
+     2c8:	61 30       	cpi	r22, 0x01	; 1
+     2ca:	09 f0       	breq	.+2      	; 0x2ce <gpio_vPinMode+0x90>
+     2cc:	bb c2       	rjmp	.+1398   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRG |= (1 << PG5);
+     2ce:	83 b3       	in	r24, 0x13	; 19
+     2d0:	80 62       	ori	r24, 0x20	; 32
+     2d2:	83 bb       	out	0x13, r24	; 19
+     2d4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin5	
+		case 5 :
+		if(u8Mode == 0)
+     2d6:	61 11       	cpse	r22, r1
+     2d8:	04 c0       	rjmp	.+8      	; 0x2e2 <gpio_vPinMode+0xa4>
+			DDRE &= ~(1 << PE3);
+     2da:	8d b1       	in	r24, 0x0d	; 13
+     2dc:	87 7f       	andi	r24, 0xF7	; 247
+     2de:	8d b9       	out	0x0d, r24	; 13
+     2e0:	08 95       	ret
+		else if(u8Mode == 1)
+     2e2:	61 30       	cpi	r22, 0x01	; 1
+     2e4:	09 f0       	breq	.+2      	; 0x2e8 <gpio_vPinMode+0xaa>
+     2e6:	ae c2       	rjmp	.+1372   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRE |= (1 << PE3);
+     2e8:	8d b1       	in	r24, 0x0d	; 13
+     2ea:	88 60       	ori	r24, 0x08	; 8
+     2ec:	8d b9       	out	0x0d, r24	; 13
+     2ee:	08 95       	ret
+			break;
+		break;
+		
+		//set pin6	
+		case 6 :
+		if(u8Mode == 0)
+     2f0:	61 11       	cpse	r22, r1
+     2f2:	06 c0       	rjmp	.+12     	; 0x300 <gpio_vPinMode+0xc2>
+			DDRH &= ~(1 << PH3);
+     2f4:	e1 e0       	ldi	r30, 0x01	; 1
+     2f6:	f1 e0       	ldi	r31, 0x01	; 1
+     2f8:	80 81       	ld	r24, Z
+     2fa:	87 7f       	andi	r24, 0xF7	; 247
+     2fc:	80 83       	st	Z, r24
+     2fe:	08 95       	ret
+		else if(u8Mode == 1)
+     300:	61 30       	cpi	r22, 0x01	; 1
+     302:	09 f0       	breq	.+2      	; 0x306 <gpio_vPinMode+0xc8>
+     304:	9f c2       	rjmp	.+1342   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH3);
+     306:	e1 e0       	ldi	r30, 0x01	; 1
+     308:	f1 e0       	ldi	r31, 0x01	; 1
+     30a:	80 81       	ld	r24, Z
+     30c:	88 60       	ori	r24, 0x08	; 8
+     30e:	80 83       	st	Z, r24
+     310:	08 95       	ret
+			break;
+		break;
+		
+		//set pin7
+		case 7 :
+		if(u8Mode == 0)
+     312:	61 11       	cpse	r22, r1
+     314:	06 c0       	rjmp	.+12     	; 0x322 <gpio_vPinMode+0xe4>
+			DDRH &= ~(1 << PH4);
+     316:	e1 e0       	ldi	r30, 0x01	; 1
+     318:	f1 e0       	ldi	r31, 0x01	; 1
+     31a:	80 81       	ld	r24, Z
+     31c:	8f 7e       	andi	r24, 0xEF	; 239
+     31e:	80 83       	st	Z, r24
+     320:	08 95       	ret
+		else if(u8Mode == 1)
+     322:	61 30       	cpi	r22, 0x01	; 1
+     324:	09 f0       	breq	.+2      	; 0x328 <gpio_vPinMode+0xea>
+     326:	8e c2       	rjmp	.+1308   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH4);
+     328:	e1 e0       	ldi	r30, 0x01	; 1
+     32a:	f1 e0       	ldi	r31, 0x01	; 1
+     32c:	80 81       	ld	r24, Z
+     32e:	80 61       	ori	r24, 0x10	; 16
+     330:	80 83       	st	Z, r24
+     332:	08 95       	ret
+		else
+			break;
+		break;
+		//set pin8
+		case 8 :
+		if(u8Mode == 0)
+     334:	61 11       	cpse	r22, r1
+     336:	06 c0       	rjmp	.+12     	; 0x344 <gpio_vPinMode+0x106>
+			DDRH &= ~(1 << PH5);
+     338:	e1 e0       	ldi	r30, 0x01	; 1
+     33a:	f1 e0       	ldi	r31, 0x01	; 1
+     33c:	80 81       	ld	r24, Z
+     33e:	8f 7d       	andi	r24, 0xDF	; 223
+     340:	80 83       	st	Z, r24
+     342:	08 95       	ret
+		else if(u8Mode == 1)
+     344:	61 30       	cpi	r22, 0x01	; 1
+     346:	09 f0       	breq	.+2      	; 0x34a <gpio_vPinMode+0x10c>
+     348:	7d c2       	rjmp	.+1274   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH5);
+     34a:	e1 e0       	ldi	r30, 0x01	; 1
+     34c:	f1 e0       	ldi	r31, 0x01	; 1
+     34e:	80 81       	ld	r24, Z
+     350:	80 62       	ori	r24, 0x20	; 32
+     352:	80 83       	st	Z, r24
+     354:	08 95       	ret
+			break;
+		break;
+		
+		//set pin9		
+		case 9 :
+		if(u8Mode == 0)
+     356:	61 11       	cpse	r22, r1
+     358:	06 c0       	rjmp	.+12     	; 0x366 <gpio_vPinMode+0x128>
+			DDRH &= ~(1 << PH6);
+     35a:	e1 e0       	ldi	r30, 0x01	; 1
+     35c:	f1 e0       	ldi	r31, 0x01	; 1
+     35e:	80 81       	ld	r24, Z
+     360:	8f 7b       	andi	r24, 0xBF	; 191
+     362:	80 83       	st	Z, r24
+     364:	08 95       	ret
+		else if(u8Mode == 1)
+     366:	61 30       	cpi	r22, 0x01	; 1
+     368:	09 f0       	breq	.+2      	; 0x36c <gpio_vPinMode+0x12e>
+     36a:	6c c2       	rjmp	.+1240   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH6);
+     36c:	e1 e0       	ldi	r30, 0x01	; 1
+     36e:	f1 e0       	ldi	r31, 0x01	; 1
+     370:	80 81       	ld	r24, Z
+     372:	80 64       	ori	r24, 0x40	; 64
+     374:	80 83       	st	Z, r24
+     376:	08 95       	ret
+			break;
+		break;
+		
+		//set pin10		
+		case 10 :
+		if(u8Mode == 0)
+     378:	61 11       	cpse	r22, r1
+     37a:	04 c0       	rjmp	.+8      	; 0x384 <gpio_vPinMode+0x146>
+			DDRB &= ~(1 << PB4);
+     37c:	84 b1       	in	r24, 0x04	; 4
+     37e:	8f 7e       	andi	r24, 0xEF	; 239
+     380:	84 b9       	out	0x04, r24	; 4
+     382:	08 95       	ret
+		else if(u8Mode == 1)
+     384:	61 30       	cpi	r22, 0x01	; 1
+     386:	09 f0       	breq	.+2      	; 0x38a <gpio_vPinMode+0x14c>
+     388:	5d c2       	rjmp	.+1210   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB4);
+     38a:	84 b1       	in	r24, 0x04	; 4
+     38c:	80 61       	ori	r24, 0x10	; 16
+     38e:	84 b9       	out	0x04, r24	; 4
+     390:	08 95       	ret
+			break;
+		break;
+		
+		//set pin11		
+		case 11 :
+		if(u8Mode == 0)
+     392:	61 11       	cpse	r22, r1
+     394:	04 c0       	rjmp	.+8      	; 0x39e <gpio_vPinMode+0x160>
+			DDRB &= ~(1 << PB5);
+     396:	84 b1       	in	r24, 0x04	; 4
+     398:	8f 7d       	andi	r24, 0xDF	; 223
+     39a:	84 b9       	out	0x04, r24	; 4
+     39c:	08 95       	ret
+		else if(u8Mode == 1)
+     39e:	61 30       	cpi	r22, 0x01	; 1
+     3a0:	09 f0       	breq	.+2      	; 0x3a4 <gpio_vPinMode+0x166>
+     3a2:	50 c2       	rjmp	.+1184   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB5);
+     3a4:	84 b1       	in	r24, 0x04	; 4
+     3a6:	80 62       	ori	r24, 0x20	; 32
+     3a8:	84 b9       	out	0x04, r24	; 4
+     3aa:	08 95       	ret
+			break;
+		break;
+		
+		//set pin12		
+		case 12 :
+		if(u8Mode == 0)
+     3ac:	61 11       	cpse	r22, r1
+     3ae:	04 c0       	rjmp	.+8      	; 0x3b8 <gpio_vPinMode+0x17a>
+			DDRB &= ~(1 << PB6);
+     3b0:	84 b1       	in	r24, 0x04	; 4
+     3b2:	8f 7b       	andi	r24, 0xBF	; 191
+     3b4:	84 b9       	out	0x04, r24	; 4
+     3b6:	08 95       	ret
+		else if(u8Mode == 1)
+     3b8:	61 30       	cpi	r22, 0x01	; 1
+     3ba:	09 f0       	breq	.+2      	; 0x3be <gpio_vPinMode+0x180>
+     3bc:	43 c2       	rjmp	.+1158   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB6);
+     3be:	84 b1       	in	r24, 0x04	; 4
+     3c0:	80 64       	ori	r24, 0x40	; 64
+     3c2:	84 b9       	out	0x04, r24	; 4
+     3c4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin13		
+		case 13 :
+		if(u8Mode == 0)
+     3c6:	61 11       	cpse	r22, r1
+     3c8:	04 c0       	rjmp	.+8      	; 0x3d2 <gpio_vPinMode+0x194>
+			DDRB &= ~(1 << PB7);
+     3ca:	84 b1       	in	r24, 0x04	; 4
+     3cc:	8f 77       	andi	r24, 0x7F	; 127
+     3ce:	84 b9       	out	0x04, r24	; 4
+     3d0:	08 95       	ret
+		else if(u8Mode == 1)
+     3d2:	61 30       	cpi	r22, 0x01	; 1
+     3d4:	09 f0       	breq	.+2      	; 0x3d8 <gpio_vPinMode+0x19a>
+     3d6:	36 c2       	rjmp	.+1132   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB7);
+     3d8:	84 b1       	in	r24, 0x04	; 4
+     3da:	80 68       	ori	r24, 0x80	; 128
+     3dc:	84 b9       	out	0x04, r24	; 4
+     3de:	08 95       	ret
+			break;
+		break;
+			
+		//set pin14		
+		case 14 :
+		if(u8Mode == 0)
+     3e0:	61 11       	cpse	r22, r1
+     3e2:	06 c0       	rjmp	.+12     	; 0x3f0 <gpio_vPinMode+0x1b2>
+			DDRJ &= ~(1 << PJ1);
+     3e4:	e4 e0       	ldi	r30, 0x04	; 4
+     3e6:	f1 e0       	ldi	r31, 0x01	; 1
+     3e8:	80 81       	ld	r24, Z
+     3ea:	8d 7f       	andi	r24, 0xFD	; 253
+     3ec:	80 83       	st	Z, r24
+     3ee:	08 95       	ret
+		else if(u8Mode == 1)
+     3f0:	61 30       	cpi	r22, 0x01	; 1
+     3f2:	09 f0       	breq	.+2      	; 0x3f6 <gpio_vPinMode+0x1b8>
+     3f4:	27 c2       	rjmp	.+1102   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRJ |= (1 << PJ1);
+     3f6:	e4 e0       	ldi	r30, 0x04	; 4
+     3f8:	f1 e0       	ldi	r31, 0x01	; 1
+     3fa:	80 81       	ld	r24, Z
+     3fc:	82 60       	ori	r24, 0x02	; 2
+     3fe:	80 83       	st	Z, r24
+     400:	08 95       	ret
+			break;
+		break;
+		
+		//set pin15		
+		case 15 :
+		if(u8Mode == 0)
+     402:	61 11       	cpse	r22, r1
+     404:	06 c0       	rjmp	.+12     	; 0x412 <__LOCK_REGION_LENGTH__+0x12>
+			DDRJ &= ~(1 << PJ0);
+     406:	e4 e0       	ldi	r30, 0x04	; 4
+     408:	f1 e0       	ldi	r31, 0x01	; 1
+     40a:	80 81       	ld	r24, Z
+     40c:	8e 7f       	andi	r24, 0xFE	; 254
+     40e:	80 83       	st	Z, r24
+     410:	08 95       	ret
+		else if(u8Mode == 1)
+     412:	61 30       	cpi	r22, 0x01	; 1
+     414:	09 f0       	breq	.+2      	; 0x418 <__LOCK_REGION_LENGTH__+0x18>
+     416:	16 c2       	rjmp	.+1068   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRJ |= (1 << PJ0);
+     418:	e4 e0       	ldi	r30, 0x04	; 4
+     41a:	f1 e0       	ldi	r31, 0x01	; 1
+     41c:	80 81       	ld	r24, Z
+     41e:	81 60       	ori	r24, 0x01	; 1
+     420:	80 83       	st	Z, r24
+     422:	08 95       	ret
+			break;
+		break;
+		
+		//set pin16		
+		case 16 :
+		if(u8Mode == 0)
+     424:	61 11       	cpse	r22, r1
+     426:	06 c0       	rjmp	.+12     	; 0x434 <__LOCK_REGION_LENGTH__+0x34>
+			DDRH &= ~(1 << PH1);
+     428:	e1 e0       	ldi	r30, 0x01	; 1
+     42a:	f1 e0       	ldi	r31, 0x01	; 1
+     42c:	80 81       	ld	r24, Z
+     42e:	8d 7f       	andi	r24, 0xFD	; 253
+     430:	80 83       	st	Z, r24
+     432:	08 95       	ret
+		else if(u8Mode == 1)
+     434:	61 30       	cpi	r22, 0x01	; 1
+     436:	09 f0       	breq	.+2      	; 0x43a <__LOCK_REGION_LENGTH__+0x3a>
+     438:	05 c2       	rjmp	.+1034   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH1);
+     43a:	e1 e0       	ldi	r30, 0x01	; 1
+     43c:	f1 e0       	ldi	r31, 0x01	; 1
+     43e:	80 81       	ld	r24, Z
+     440:	82 60       	ori	r24, 0x02	; 2
+     442:	80 83       	st	Z, r24
+     444:	08 95       	ret
+			break;
+		break;
+		
+		//set pin17	
+		case 17 :
+		if(u8Mode == 0)
+     446:	61 11       	cpse	r22, r1
+     448:	06 c0       	rjmp	.+12     	; 0x456 <__LOCK_REGION_LENGTH__+0x56>
+			DDRH &= ~(1 << PH0);
+     44a:	e1 e0       	ldi	r30, 0x01	; 1
+     44c:	f1 e0       	ldi	r31, 0x01	; 1
+     44e:	80 81       	ld	r24, Z
+     450:	8e 7f       	andi	r24, 0xFE	; 254
+     452:	80 83       	st	Z, r24
+     454:	08 95       	ret
+		else if(u8Mode == 1)
+     456:	61 30       	cpi	r22, 0x01	; 1
+     458:	09 f0       	breq	.+2      	; 0x45c <__LOCK_REGION_LENGTH__+0x5c>
+     45a:	f4 c1       	rjmp	.+1000   	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRH |= (1 << PH0);
+     45c:	e1 e0       	ldi	r30, 0x01	; 1
+     45e:	f1 e0       	ldi	r31, 0x01	; 1
+     460:	80 81       	ld	r24, Z
+     462:	81 60       	ori	r24, 0x01	; 1
+     464:	80 83       	st	Z, r24
+     466:	08 95       	ret
+			break;
+		break;
+		
+		//set pin18	
+		case 18 :
+		if(u8Mode == 0)
+     468:	61 11       	cpse	r22, r1
+     46a:	04 c0       	rjmp	.+8      	; 0x474 <__LOCK_REGION_LENGTH__+0x74>
+			DDRD &= ~(1 << PD3);
+     46c:	8a b1       	in	r24, 0x0a	; 10
+     46e:	87 7f       	andi	r24, 0xF7	; 247
+     470:	8a b9       	out	0x0a, r24	; 10
+     472:	08 95       	ret
+		else if(u8Mode == 1)
+     474:	61 30       	cpi	r22, 0x01	; 1
+     476:	09 f0       	breq	.+2      	; 0x47a <__LOCK_REGION_LENGTH__+0x7a>
+     478:	e5 c1       	rjmp	.+970    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRD |= (1 << PD3);
+     47a:	8a b1       	in	r24, 0x0a	; 10
+     47c:	88 60       	ori	r24, 0x08	; 8
+     47e:	8a b9       	out	0x0a, r24	; 10
+     480:	08 95       	ret
+			break;
+		break;
+		
+		//set pin19	
+		case 19 :
+		if(u8Mode == 0)
+     482:	61 11       	cpse	r22, r1
+     484:	04 c0       	rjmp	.+8      	; 0x48e <__LOCK_REGION_LENGTH__+0x8e>
+			DDRD &= ~(1 << PD2);
+     486:	8a b1       	in	r24, 0x0a	; 10
+     488:	8b 7f       	andi	r24, 0xFB	; 251
+     48a:	8a b9       	out	0x0a, r24	; 10
+     48c:	08 95       	ret
+		else if(u8Mode == 1)
+     48e:	61 30       	cpi	r22, 0x01	; 1
+     490:	09 f0       	breq	.+2      	; 0x494 <__LOCK_REGION_LENGTH__+0x94>
+     492:	d8 c1       	rjmp	.+944    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRD |= (1 << PD2);
+     494:	8a b1       	in	r24, 0x0a	; 10
+     496:	84 60       	ori	r24, 0x04	; 4
+     498:	8a b9       	out	0x0a, r24	; 10
+     49a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin20	
+		case 20 :
+		if(u8Mode == 0)
+     49c:	61 11       	cpse	r22, r1
+     49e:	04 c0       	rjmp	.+8      	; 0x4a8 <__LOCK_REGION_LENGTH__+0xa8>
+			DDRD &= ~(1 << PD1);
+     4a0:	8a b1       	in	r24, 0x0a	; 10
+     4a2:	8d 7f       	andi	r24, 0xFD	; 253
+     4a4:	8a b9       	out	0x0a, r24	; 10
+     4a6:	08 95       	ret
+		else if(u8Mode == 1)
+     4a8:	61 30       	cpi	r22, 0x01	; 1
+     4aa:	09 f0       	breq	.+2      	; 0x4ae <__LOCK_REGION_LENGTH__+0xae>
+     4ac:	cb c1       	rjmp	.+918    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRD |= (1 << PD1);
+     4ae:	8a b1       	in	r24, 0x0a	; 10
+     4b0:	82 60       	ori	r24, 0x02	; 2
+     4b2:	8a b9       	out	0x0a, r24	; 10
+     4b4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin21	
+		case 21 :
+		if(u8Mode == 0)
+     4b6:	61 11       	cpse	r22, r1
+     4b8:	04 c0       	rjmp	.+8      	; 0x4c2 <__LOCK_REGION_LENGTH__+0xc2>
+			DDRD &= ~(1 << PD0);
+     4ba:	8a b1       	in	r24, 0x0a	; 10
+     4bc:	8e 7f       	andi	r24, 0xFE	; 254
+     4be:	8a b9       	out	0x0a, r24	; 10
+     4c0:	08 95       	ret
+		else if(u8Mode == 1)
+     4c2:	61 30       	cpi	r22, 0x01	; 1
+     4c4:	09 f0       	breq	.+2      	; 0x4c8 <__LOCK_REGION_LENGTH__+0xc8>
+     4c6:	be c1       	rjmp	.+892    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRD |= (1 << PD0);
+     4c8:	8a b1       	in	r24, 0x0a	; 10
+     4ca:	81 60       	ori	r24, 0x01	; 1
+     4cc:	8a b9       	out	0x0a, r24	; 10
+     4ce:	08 95       	ret
+			break;
+		break;
+		
+		//set pin22	
+		case 22 :
+		if(u8Mode == 0)
+     4d0:	61 11       	cpse	r22, r1
+     4d2:	04 c0       	rjmp	.+8      	; 0x4dc <__LOCK_REGION_LENGTH__+0xdc>
+			DDRA &= ~(1 << PA0);
+     4d4:	81 b1       	in	r24, 0x01	; 1
+     4d6:	8e 7f       	andi	r24, 0xFE	; 254
+     4d8:	81 b9       	out	0x01, r24	; 1
+     4da:	08 95       	ret
+		else if(u8Mode == 1)
+     4dc:	61 30       	cpi	r22, 0x01	; 1
+     4de:	09 f0       	breq	.+2      	; 0x4e2 <__LOCK_REGION_LENGTH__+0xe2>
+     4e0:	b1 c1       	rjmp	.+866    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA0);
+     4e2:	81 b1       	in	r24, 0x01	; 1
+     4e4:	81 60       	ori	r24, 0x01	; 1
+     4e6:	81 b9       	out	0x01, r24	; 1
+     4e8:	08 95       	ret
+			break;
+		break;
+		
+		//set pin23	
+		case 23 :
+		if(u8Mode == 0)
+     4ea:	61 11       	cpse	r22, r1
+     4ec:	04 c0       	rjmp	.+8      	; 0x4f6 <__LOCK_REGION_LENGTH__+0xf6>
+			DDRA &= ~(1 << PA1);
+     4ee:	81 b1       	in	r24, 0x01	; 1
+     4f0:	8d 7f       	andi	r24, 0xFD	; 253
+     4f2:	81 b9       	out	0x01, r24	; 1
+     4f4:	08 95       	ret
+		else if(u8Mode == 1)
+     4f6:	61 30       	cpi	r22, 0x01	; 1
+     4f8:	09 f0       	breq	.+2      	; 0x4fc <__LOCK_REGION_LENGTH__+0xfc>
+     4fa:	a4 c1       	rjmp	.+840    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA1);
+     4fc:	81 b1       	in	r24, 0x01	; 1
+     4fe:	82 60       	ori	r24, 0x02	; 2
+     500:	81 b9       	out	0x01, r24	; 1
+     502:	08 95       	ret
+			break;
+		break;
+			
+		//set pin24	
+		case 24 :
+		if(u8Mode == 0)
+     504:	61 11       	cpse	r22, r1
+     506:	04 c0       	rjmp	.+8      	; 0x510 <__LOCK_REGION_LENGTH__+0x110>
+			DDRA &= ~(1 << PA2);
+     508:	81 b1       	in	r24, 0x01	; 1
+     50a:	8b 7f       	andi	r24, 0xFB	; 251
+     50c:	81 b9       	out	0x01, r24	; 1
+     50e:	08 95       	ret
+		else if(u8Mode == 1)
+     510:	61 30       	cpi	r22, 0x01	; 1
+     512:	09 f0       	breq	.+2      	; 0x516 <__LOCK_REGION_LENGTH__+0x116>
+     514:	97 c1       	rjmp	.+814    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA2);
+     516:	81 b1       	in	r24, 0x01	; 1
+     518:	84 60       	ori	r24, 0x04	; 4
+     51a:	81 b9       	out	0x01, r24	; 1
+     51c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin25	
+		case 25 :
+		if(u8Mode == 0)
+     51e:	61 11       	cpse	r22, r1
+     520:	04 c0       	rjmp	.+8      	; 0x52a <__LOCK_REGION_LENGTH__+0x12a>
+			DDRA &= ~(1 << PA3);
+     522:	81 b1       	in	r24, 0x01	; 1
+     524:	87 7f       	andi	r24, 0xF7	; 247
+     526:	81 b9       	out	0x01, r24	; 1
+     528:	08 95       	ret
+		else if(u8Mode == 1)
+     52a:	61 30       	cpi	r22, 0x01	; 1
+     52c:	09 f0       	breq	.+2      	; 0x530 <__LOCK_REGION_LENGTH__+0x130>
+     52e:	8a c1       	rjmp	.+788    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA3);
+     530:	81 b1       	in	r24, 0x01	; 1
+     532:	88 60       	ori	r24, 0x08	; 8
+     534:	81 b9       	out	0x01, r24	; 1
+     536:	08 95       	ret
+			break;
+		break;
+		
+		//set pin26	
+		case 26 :
+		if(u8Mode == 0)
+     538:	61 11       	cpse	r22, r1
+     53a:	04 c0       	rjmp	.+8      	; 0x544 <__LOCK_REGION_LENGTH__+0x144>
+			DDRA &= ~(1 << PA4);
+     53c:	81 b1       	in	r24, 0x01	; 1
+     53e:	8f 7e       	andi	r24, 0xEF	; 239
+     540:	81 b9       	out	0x01, r24	; 1
+     542:	08 95       	ret
+		else if(u8Mode == 1)
+     544:	61 30       	cpi	r22, 0x01	; 1
+     546:	09 f0       	breq	.+2      	; 0x54a <__LOCK_REGION_LENGTH__+0x14a>
+     548:	7d c1       	rjmp	.+762    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA4);
+     54a:	81 b1       	in	r24, 0x01	; 1
+     54c:	80 61       	ori	r24, 0x10	; 16
+     54e:	81 b9       	out	0x01, r24	; 1
+     550:	08 95       	ret
+			break;
+		break;
+		
+		//set pin27	
+		case 27 :
+		if(u8Mode == 0)
+     552:	61 11       	cpse	r22, r1
+     554:	04 c0       	rjmp	.+8      	; 0x55e <__LOCK_REGION_LENGTH__+0x15e>
+			DDRA &= ~(1 << PA5);
+     556:	81 b1       	in	r24, 0x01	; 1
+     558:	8f 7d       	andi	r24, 0xDF	; 223
+     55a:	81 b9       	out	0x01, r24	; 1
+     55c:	08 95       	ret
+		else if(u8Mode == 1)
+     55e:	61 30       	cpi	r22, 0x01	; 1
+     560:	09 f0       	breq	.+2      	; 0x564 <__LOCK_REGION_LENGTH__+0x164>
+     562:	70 c1       	rjmp	.+736    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA5);
+     564:	81 b1       	in	r24, 0x01	; 1
+     566:	80 62       	ori	r24, 0x20	; 32
+     568:	81 b9       	out	0x01, r24	; 1
+     56a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin28	
+		case 28 :
+		if(u8Mode == 0)
+     56c:	61 11       	cpse	r22, r1
+     56e:	04 c0       	rjmp	.+8      	; 0x578 <__LOCK_REGION_LENGTH__+0x178>
+			DDRA &= ~(1 << PA6);
+     570:	81 b1       	in	r24, 0x01	; 1
+     572:	8f 7b       	andi	r24, 0xBF	; 191
+     574:	81 b9       	out	0x01, r24	; 1
+     576:	08 95       	ret
+		else if(u8Mode == 1)
+     578:	61 30       	cpi	r22, 0x01	; 1
+     57a:	09 f0       	breq	.+2      	; 0x57e <__LOCK_REGION_LENGTH__+0x17e>
+     57c:	63 c1       	rjmp	.+710    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA6);
+     57e:	81 b1       	in	r24, 0x01	; 1
+     580:	80 64       	ori	r24, 0x40	; 64
+     582:	81 b9       	out	0x01, r24	; 1
+     584:	08 95       	ret
+			break;
+		break;
+		
+		//set pin29	
+		case 29 :
+		if(u8Mode == 0)
+     586:	61 11       	cpse	r22, r1
+     588:	04 c0       	rjmp	.+8      	; 0x592 <__LOCK_REGION_LENGTH__+0x192>
+			DDRA &= ~(1 << PA7);
+     58a:	81 b1       	in	r24, 0x01	; 1
+     58c:	8f 77       	andi	r24, 0x7F	; 127
+     58e:	81 b9       	out	0x01, r24	; 1
+     590:	08 95       	ret
+		else if(u8Mode == 1)
+     592:	61 30       	cpi	r22, 0x01	; 1
+     594:	09 f0       	breq	.+2      	; 0x598 <__LOCK_REGION_LENGTH__+0x198>
+     596:	56 c1       	rjmp	.+684    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRA |= (1 << PA7);
+     598:	81 b1       	in	r24, 0x01	; 1
+     59a:	80 68       	ori	r24, 0x80	; 128
+     59c:	81 b9       	out	0x01, r24	; 1
+     59e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin30	
+		case 30 :
+		if(u8Mode == 0)
+     5a0:	61 11       	cpse	r22, r1
+     5a2:	04 c0       	rjmp	.+8      	; 0x5ac <__LOCK_REGION_LENGTH__+0x1ac>
+			DDRC &= ~(1 << PC7);
+     5a4:	87 b1       	in	r24, 0x07	; 7
+     5a6:	8f 77       	andi	r24, 0x7F	; 127
+     5a8:	87 b9       	out	0x07, r24	; 7
+     5aa:	08 95       	ret
+		else if(u8Mode == 1)
+     5ac:	61 30       	cpi	r22, 0x01	; 1
+     5ae:	09 f0       	breq	.+2      	; 0x5b2 <__LOCK_REGION_LENGTH__+0x1b2>
+     5b0:	49 c1       	rjmp	.+658    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC7);
+     5b2:	87 b1       	in	r24, 0x07	; 7
+     5b4:	80 68       	ori	r24, 0x80	; 128
+     5b6:	87 b9       	out	0x07, r24	; 7
+     5b8:	08 95       	ret
+			break;
+		break;
+		
+		//set pin31	
+		case 31 :
+		if(u8Mode == 0)
+     5ba:	61 11       	cpse	r22, r1
+     5bc:	04 c0       	rjmp	.+8      	; 0x5c6 <__LOCK_REGION_LENGTH__+0x1c6>
+			DDRC &= ~(1 << PC6);
+     5be:	87 b1       	in	r24, 0x07	; 7
+     5c0:	8f 7b       	andi	r24, 0xBF	; 191
+     5c2:	87 b9       	out	0x07, r24	; 7
+     5c4:	08 95       	ret
+		else if(u8Mode == 1)
+     5c6:	61 30       	cpi	r22, 0x01	; 1
+     5c8:	09 f0       	breq	.+2      	; 0x5cc <__LOCK_REGION_LENGTH__+0x1cc>
+     5ca:	3c c1       	rjmp	.+632    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC6);
+     5cc:	87 b1       	in	r24, 0x07	; 7
+     5ce:	80 64       	ori	r24, 0x40	; 64
+     5d0:	87 b9       	out	0x07, r24	; 7
+     5d2:	08 95       	ret
+			break;
+		break;
+			
+		//set pin32	
+		case 32 :
+		if(u8Mode == 0)
+     5d4:	61 11       	cpse	r22, r1
+     5d6:	04 c0       	rjmp	.+8      	; 0x5e0 <__LOCK_REGION_LENGTH__+0x1e0>
+			DDRC &= ~(1 << PC5);
+     5d8:	87 b1       	in	r24, 0x07	; 7
+     5da:	8f 7d       	andi	r24, 0xDF	; 223
+     5dc:	87 b9       	out	0x07, r24	; 7
+     5de:	08 95       	ret
+		else if(u8Mode == 1)
+     5e0:	61 30       	cpi	r22, 0x01	; 1
+     5e2:	09 f0       	breq	.+2      	; 0x5e6 <__LOCK_REGION_LENGTH__+0x1e6>
+     5e4:	2f c1       	rjmp	.+606    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC5);
+     5e6:	87 b1       	in	r24, 0x07	; 7
+     5e8:	80 62       	ori	r24, 0x20	; 32
+     5ea:	87 b9       	out	0x07, r24	; 7
+     5ec:	08 95       	ret
+			break;
+		break;
+		
+		//set pin33	
+		case 33 :
+		if(u8Mode == 0)
+     5ee:	61 11       	cpse	r22, r1
+     5f0:	04 c0       	rjmp	.+8      	; 0x5fa <__LOCK_REGION_LENGTH__+0x1fa>
+			DDRC &= ~(1 << PC4);
+     5f2:	87 b1       	in	r24, 0x07	; 7
+     5f4:	8f 7e       	andi	r24, 0xEF	; 239
+     5f6:	87 b9       	out	0x07, r24	; 7
+     5f8:	08 95       	ret
+		else if(u8Mode == 1)
+     5fa:	61 30       	cpi	r22, 0x01	; 1
+     5fc:	09 f0       	breq	.+2      	; 0x600 <__LOCK_REGION_LENGTH__+0x200>
+     5fe:	22 c1       	rjmp	.+580    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC4);
+     600:	87 b1       	in	r24, 0x07	; 7
+     602:	80 61       	ori	r24, 0x10	; 16
+     604:	87 b9       	out	0x07, r24	; 7
+     606:	08 95       	ret
+			break;
+		break;
+		
+		//set pin34	
+		case 34 :
+		if(u8Mode == 0)
+     608:	61 11       	cpse	r22, r1
+     60a:	04 c0       	rjmp	.+8      	; 0x614 <__LOCK_REGION_LENGTH__+0x214>
+			DDRC &= ~(1 << PC3);
+     60c:	87 b1       	in	r24, 0x07	; 7
+     60e:	87 7f       	andi	r24, 0xF7	; 247
+     610:	87 b9       	out	0x07, r24	; 7
+     612:	08 95       	ret
+		else if(u8Mode == 1)
+     614:	61 30       	cpi	r22, 0x01	; 1
+     616:	09 f0       	breq	.+2      	; 0x61a <__LOCK_REGION_LENGTH__+0x21a>
+     618:	15 c1       	rjmp	.+554    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC3);
+     61a:	87 b1       	in	r24, 0x07	; 7
+     61c:	88 60       	ori	r24, 0x08	; 8
+     61e:	87 b9       	out	0x07, r24	; 7
+     620:	08 95       	ret
+			break;
+		break;
+			
+		//set pin35
+		case 35 :
+		if(u8Mode == 0)
+     622:	61 11       	cpse	r22, r1
+     624:	04 c0       	rjmp	.+8      	; 0x62e <__LOCK_REGION_LENGTH__+0x22e>
+			DDRC &= ~(1 << PC2);
+     626:	87 b1       	in	r24, 0x07	; 7
+     628:	8b 7f       	andi	r24, 0xFB	; 251
+     62a:	87 b9       	out	0x07, r24	; 7
+     62c:	08 95       	ret
+		else if(u8Mode == 1)
+     62e:	61 30       	cpi	r22, 0x01	; 1
+     630:	09 f0       	breq	.+2      	; 0x634 <__LOCK_REGION_LENGTH__+0x234>
+     632:	08 c1       	rjmp	.+528    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC2);
+     634:	87 b1       	in	r24, 0x07	; 7
+     636:	84 60       	ori	r24, 0x04	; 4
+     638:	87 b9       	out	0x07, r24	; 7
+     63a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin36	
+		case 36 :
+		if(u8Mode == 0)
+     63c:	61 11       	cpse	r22, r1
+     63e:	04 c0       	rjmp	.+8      	; 0x648 <__LOCK_REGION_LENGTH__+0x248>
+			DDRC &= ~(1 << PC1);
+     640:	87 b1       	in	r24, 0x07	; 7
+     642:	8d 7f       	andi	r24, 0xFD	; 253
+     644:	87 b9       	out	0x07, r24	; 7
+     646:	08 95       	ret
+		else if(u8Mode == 1)
+     648:	61 30       	cpi	r22, 0x01	; 1
+     64a:	09 f0       	breq	.+2      	; 0x64e <__LOCK_REGION_LENGTH__+0x24e>
+     64c:	fb c0       	rjmp	.+502    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC1);
+     64e:	87 b1       	in	r24, 0x07	; 7
+     650:	82 60       	ori	r24, 0x02	; 2
+     652:	87 b9       	out	0x07, r24	; 7
+     654:	08 95       	ret
+			break;
+		break;
+		
+		//set pin37	
+		case 37 :
+		if(u8Mode == 0)
+     656:	61 11       	cpse	r22, r1
+     658:	04 c0       	rjmp	.+8      	; 0x662 <__LOCK_REGION_LENGTH__+0x262>
+			DDRC &= ~(1 << PC0);
+     65a:	87 b1       	in	r24, 0x07	; 7
+     65c:	8e 7f       	andi	r24, 0xFE	; 254
+     65e:	87 b9       	out	0x07, r24	; 7
+     660:	08 95       	ret
+		else if(u8Mode == 1)
+     662:	61 30       	cpi	r22, 0x01	; 1
+     664:	09 f0       	breq	.+2      	; 0x668 <__LOCK_REGION_LENGTH__+0x268>
+     666:	ee c0       	rjmp	.+476    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRC |= (1 << PC0);
+     668:	87 b1       	in	r24, 0x07	; 7
+     66a:	81 60       	ori	r24, 0x01	; 1
+     66c:	87 b9       	out	0x07, r24	; 7
+     66e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin38	
+		case 38 :
+		if(u8Mode == 0)
+     670:	61 11       	cpse	r22, r1
+     672:	04 c0       	rjmp	.+8      	; 0x67c <__LOCK_REGION_LENGTH__+0x27c>
+			DDRD &= ~(1 << PD7);
+     674:	8a b1       	in	r24, 0x0a	; 10
+     676:	8f 77       	andi	r24, 0x7F	; 127
+     678:	8a b9       	out	0x0a, r24	; 10
+     67a:	08 95       	ret
+		else if(u8Mode == 1)
+     67c:	61 30       	cpi	r22, 0x01	; 1
+     67e:	09 f0       	breq	.+2      	; 0x682 <__LOCK_REGION_LENGTH__+0x282>
+     680:	e1 c0       	rjmp	.+450    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRD |= (1 << PD7);
+     682:	8a b1       	in	r24, 0x0a	; 10
+     684:	80 68       	ori	r24, 0x80	; 128
+     686:	8a b9       	out	0x0a, r24	; 10
+     688:	08 95       	ret
+			break;
+		break;
+		
+		//set pin39	
+		case 39 :
+		if(u8Mode == 0)
+     68a:	61 11       	cpse	r22, r1
+     68c:	04 c0       	rjmp	.+8      	; 0x696 <__LOCK_REGION_LENGTH__+0x296>
+			DDRG &= ~(1 << PG2);
+     68e:	83 b3       	in	r24, 0x13	; 19
+     690:	8b 7f       	andi	r24, 0xFB	; 251
+     692:	83 bb       	out	0x13, r24	; 19
+     694:	08 95       	ret
+		else if(u8Mode == 1)
+     696:	61 30       	cpi	r22, 0x01	; 1
+     698:	09 f0       	breq	.+2      	; 0x69c <__LOCK_REGION_LENGTH__+0x29c>
+     69a:	d4 c0       	rjmp	.+424    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRG |= (1 << PG2);
+     69c:	83 b3       	in	r24, 0x13	; 19
+     69e:	84 60       	ori	r24, 0x04	; 4
+     6a0:	83 bb       	out	0x13, r24	; 19
+     6a2:	08 95       	ret
+			break;
+		break;
+		
+		//set pin40	
+		case 40 :
+		if(u8Mode == 0)
+     6a4:	61 11       	cpse	r22, r1
+     6a6:	04 c0       	rjmp	.+8      	; 0x6b0 <__LOCK_REGION_LENGTH__+0x2b0>
+			DDRG &= ~(1 << PG1);
+     6a8:	83 b3       	in	r24, 0x13	; 19
+     6aa:	8d 7f       	andi	r24, 0xFD	; 253
+     6ac:	83 bb       	out	0x13, r24	; 19
+     6ae:	08 95       	ret
+		else if(u8Mode == 1)
+     6b0:	61 30       	cpi	r22, 0x01	; 1
+     6b2:	09 f0       	breq	.+2      	; 0x6b6 <__LOCK_REGION_LENGTH__+0x2b6>
+     6b4:	c7 c0       	rjmp	.+398    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRG |= (1 << PG1);
+     6b6:	83 b3       	in	r24, 0x13	; 19
+     6b8:	82 60       	ori	r24, 0x02	; 2
+     6ba:	83 bb       	out	0x13, r24	; 19
+     6bc:	08 95       	ret
+			break;
+		break;
+		
+		//set pin41	
+		case 41 :
+		if(u8Mode == 0)
+     6be:	61 11       	cpse	r22, r1
+     6c0:	04 c0       	rjmp	.+8      	; 0x6ca <__LOCK_REGION_LENGTH__+0x2ca>
+			DDRG &= ~(1 << PG0);
+     6c2:	83 b3       	in	r24, 0x13	; 19
+     6c4:	8e 7f       	andi	r24, 0xFE	; 254
+     6c6:	83 bb       	out	0x13, r24	; 19
+     6c8:	08 95       	ret
+		else if(u8Mode == 1)
+     6ca:	61 30       	cpi	r22, 0x01	; 1
+     6cc:	09 f0       	breq	.+2      	; 0x6d0 <__LOCK_REGION_LENGTH__+0x2d0>
+     6ce:	ba c0       	rjmp	.+372    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRG |= (1 << PG0);
+     6d0:	83 b3       	in	r24, 0x13	; 19
+     6d2:	81 60       	ori	r24, 0x01	; 1
+     6d4:	83 bb       	out	0x13, r24	; 19
+     6d6:	08 95       	ret
+			break;
+		break;
+		
+		//set pin42	
+		case 42 :
+		if(u8Mode == 0)
+     6d8:	61 11       	cpse	r22, r1
+     6da:	06 c0       	rjmp	.+12     	; 0x6e8 <__LOCK_REGION_LENGTH__+0x2e8>
+			DDRL &= ~(1 << PL7);
+     6dc:	ea e0       	ldi	r30, 0x0A	; 10
+     6de:	f1 e0       	ldi	r31, 0x01	; 1
+     6e0:	80 81       	ld	r24, Z
+     6e2:	8f 77       	andi	r24, 0x7F	; 127
+     6e4:	80 83       	st	Z, r24
+     6e6:	08 95       	ret
+		else if(u8Mode == 1)
+     6e8:	61 30       	cpi	r22, 0x01	; 1
+     6ea:	09 f0       	breq	.+2      	; 0x6ee <__LOCK_REGION_LENGTH__+0x2ee>
+     6ec:	ab c0       	rjmp	.+342    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL7);
+     6ee:	ea e0       	ldi	r30, 0x0A	; 10
+     6f0:	f1 e0       	ldi	r31, 0x01	; 1
+     6f2:	80 81       	ld	r24, Z
+     6f4:	80 68       	ori	r24, 0x80	; 128
+     6f6:	80 83       	st	Z, r24
+     6f8:	08 95       	ret
+			break;
+		break;
+		
+		//set pin43	
+		case 43 :
+		if(u8Mode == 0)
+     6fa:	61 11       	cpse	r22, r1
+     6fc:	06 c0       	rjmp	.+12     	; 0x70a <__LOCK_REGION_LENGTH__+0x30a>
+			DDRL &= ~(1 << PL6);
+     6fe:	ea e0       	ldi	r30, 0x0A	; 10
+     700:	f1 e0       	ldi	r31, 0x01	; 1
+     702:	80 81       	ld	r24, Z
+     704:	8f 7b       	andi	r24, 0xBF	; 191
+     706:	80 83       	st	Z, r24
+     708:	08 95       	ret
+		else if(u8Mode == 1)
+     70a:	61 30       	cpi	r22, 0x01	; 1
+     70c:	09 f0       	breq	.+2      	; 0x710 <__LOCK_REGION_LENGTH__+0x310>
+     70e:	9a c0       	rjmp	.+308    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL6);
+     710:	ea e0       	ldi	r30, 0x0A	; 10
+     712:	f1 e0       	ldi	r31, 0x01	; 1
+     714:	80 81       	ld	r24, Z
+     716:	80 64       	ori	r24, 0x40	; 64
+     718:	80 83       	st	Z, r24
+     71a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin44	
+		case 44 :
+		if(u8Mode == 0)
+     71c:	61 11       	cpse	r22, r1
+     71e:	06 c0       	rjmp	.+12     	; 0x72c <__LOCK_REGION_LENGTH__+0x32c>
+			DDRL &= ~(1 << PE5);
+     720:	ea e0       	ldi	r30, 0x0A	; 10
+     722:	f1 e0       	ldi	r31, 0x01	; 1
+     724:	80 81       	ld	r24, Z
+     726:	8f 7d       	andi	r24, 0xDF	; 223
+     728:	80 83       	st	Z, r24
+     72a:	08 95       	ret
+		else if(u8Mode == 1)
+     72c:	61 30       	cpi	r22, 0x01	; 1
+     72e:	09 f0       	breq	.+2      	; 0x732 <__LOCK_REGION_LENGTH__+0x332>
+     730:	89 c0       	rjmp	.+274    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PE5);
+     732:	ea e0       	ldi	r30, 0x0A	; 10
+     734:	f1 e0       	ldi	r31, 0x01	; 1
+     736:	80 81       	ld	r24, Z
+     738:	80 62       	ori	r24, 0x20	; 32
+     73a:	80 83       	st	Z, r24
+     73c:	08 95       	ret
+			break;
+		break;
+				
+		//set pin45	
+		case 45 :
+		if(u8Mode == 0)
+     73e:	61 11       	cpse	r22, r1
+     740:	06 c0       	rjmp	.+12     	; 0x74e <__LOCK_REGION_LENGTH__+0x34e>
+			DDRL &= ~(1 << PL4);
+     742:	ea e0       	ldi	r30, 0x0A	; 10
+     744:	f1 e0       	ldi	r31, 0x01	; 1
+     746:	80 81       	ld	r24, Z
+     748:	8f 7e       	andi	r24, 0xEF	; 239
+     74a:	80 83       	st	Z, r24
+     74c:	08 95       	ret
+		else if(u8Mode == 1)
+     74e:	61 30       	cpi	r22, 0x01	; 1
+     750:	09 f0       	breq	.+2      	; 0x754 <__LOCK_REGION_LENGTH__+0x354>
+     752:	78 c0       	rjmp	.+240    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL4);
+     754:	ea e0       	ldi	r30, 0x0A	; 10
+     756:	f1 e0       	ldi	r31, 0x01	; 1
+     758:	80 81       	ld	r24, Z
+     75a:	80 61       	ori	r24, 0x10	; 16
+     75c:	80 83       	st	Z, r24
+     75e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin46	
+		case 46 :
+		if(u8Mode == 0)
+     760:	61 11       	cpse	r22, r1
+     762:	06 c0       	rjmp	.+12     	; 0x770 <__LOCK_REGION_LENGTH__+0x370>
+			DDRL &= ~(1 << PL3);
+     764:	ea e0       	ldi	r30, 0x0A	; 10
+     766:	f1 e0       	ldi	r31, 0x01	; 1
+     768:	80 81       	ld	r24, Z
+     76a:	87 7f       	andi	r24, 0xF7	; 247
+     76c:	80 83       	st	Z, r24
+     76e:	08 95       	ret
+		else if(u8Mode == 1)
+     770:	61 30       	cpi	r22, 0x01	; 1
+     772:	09 f0       	breq	.+2      	; 0x776 <__LOCK_REGION_LENGTH__+0x376>
+     774:	67 c0       	rjmp	.+206    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL3);
+     776:	ea e0       	ldi	r30, 0x0A	; 10
+     778:	f1 e0       	ldi	r31, 0x01	; 1
+     77a:	80 81       	ld	r24, Z
+     77c:	88 60       	ori	r24, 0x08	; 8
+     77e:	80 83       	st	Z, r24
+     780:	08 95       	ret
+			break;
+		break;
+		
+		//set pin47	
+		case 47 :
+		if(u8Mode == 0)
+     782:	61 11       	cpse	r22, r1
+     784:	06 c0       	rjmp	.+12     	; 0x792 <__LOCK_REGION_LENGTH__+0x392>
+			DDRL &= ~(1 << PL2);
+     786:	ea e0       	ldi	r30, 0x0A	; 10
+     788:	f1 e0       	ldi	r31, 0x01	; 1
+     78a:	80 81       	ld	r24, Z
+     78c:	8b 7f       	andi	r24, 0xFB	; 251
+     78e:	80 83       	st	Z, r24
+     790:	08 95       	ret
+		else if(u8Mode == 1)
+     792:	61 30       	cpi	r22, 0x01	; 1
+     794:	09 f0       	breq	.+2      	; 0x798 <__LOCK_REGION_LENGTH__+0x398>
+     796:	56 c0       	rjmp	.+172    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL2);
+     798:	ea e0       	ldi	r30, 0x0A	; 10
+     79a:	f1 e0       	ldi	r31, 0x01	; 1
+     79c:	80 81       	ld	r24, Z
+     79e:	84 60       	ori	r24, 0x04	; 4
+     7a0:	80 83       	st	Z, r24
+     7a2:	08 95       	ret
+			break;
+		break;
+		
+		//set pin48	
+		case 48 :
+		if(u8Mode == 0)
+     7a4:	61 11       	cpse	r22, r1
+     7a6:	06 c0       	rjmp	.+12     	; 0x7b4 <__LOCK_REGION_LENGTH__+0x3b4>
+			DDRL &= ~(1 << PL1);
+     7a8:	ea e0       	ldi	r30, 0x0A	; 10
+     7aa:	f1 e0       	ldi	r31, 0x01	; 1
+     7ac:	80 81       	ld	r24, Z
+     7ae:	8d 7f       	andi	r24, 0xFD	; 253
+     7b0:	80 83       	st	Z, r24
+     7b2:	08 95       	ret
+		else if(u8Mode == 1)
+     7b4:	61 30       	cpi	r22, 0x01	; 1
+     7b6:	09 f0       	breq	.+2      	; 0x7ba <__LOCK_REGION_LENGTH__+0x3ba>
+     7b8:	45 c0       	rjmp	.+138    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL1);
+     7ba:	ea e0       	ldi	r30, 0x0A	; 10
+     7bc:	f1 e0       	ldi	r31, 0x01	; 1
+     7be:	80 81       	ld	r24, Z
+     7c0:	82 60       	ori	r24, 0x02	; 2
+     7c2:	80 83       	st	Z, r24
+     7c4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin49	
+		case 49 :
+		if(u8Mode == 0)
+     7c6:	61 11       	cpse	r22, r1
+     7c8:	06 c0       	rjmp	.+12     	; 0x7d6 <__LOCK_REGION_LENGTH__+0x3d6>
+			DDRL &= ~(1 << PL0);
+     7ca:	ea e0       	ldi	r30, 0x0A	; 10
+     7cc:	f1 e0       	ldi	r31, 0x01	; 1
+     7ce:	80 81       	ld	r24, Z
+     7d0:	8e 7f       	andi	r24, 0xFE	; 254
+     7d2:	80 83       	st	Z, r24
+     7d4:	08 95       	ret
+		else if(u8Mode == 1)
+     7d6:	61 30       	cpi	r22, 0x01	; 1
+     7d8:	a9 f5       	brne	.+106    	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRL |= (1 << PL0);
+     7da:	ea e0       	ldi	r30, 0x0A	; 10
+     7dc:	f1 e0       	ldi	r31, 0x01	; 1
+     7de:	80 81       	ld	r24, Z
+     7e0:	81 60       	ori	r24, 0x01	; 1
+     7e2:	80 83       	st	Z, r24
+     7e4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin50	
+		case 50 :
+		if(u8Mode == 0)
+     7e6:	61 11       	cpse	r22, r1
+     7e8:	04 c0       	rjmp	.+8      	; 0x7f2 <__LOCK_REGION_LENGTH__+0x3f2>
+			DDRB &= ~(1 << PB3);
+     7ea:	84 b1       	in	r24, 0x04	; 4
+     7ec:	87 7f       	andi	r24, 0xF7	; 247
+     7ee:	84 b9       	out	0x04, r24	; 4
+     7f0:	08 95       	ret
+		else if(u8Mode == 1)
+     7f2:	61 30       	cpi	r22, 0x01	; 1
+     7f4:	39 f5       	brne	.+78     	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB3);
+     7f6:	84 b1       	in	r24, 0x04	; 4
+     7f8:	88 60       	ori	r24, 0x08	; 8
+     7fa:	84 b9       	out	0x04, r24	; 4
+     7fc:	08 95       	ret
+			break;
+		break;
+		
+		//set pin51	
+		case 51 :
+		if(u8Mode == 0)
+     7fe:	61 11       	cpse	r22, r1
+     800:	04 c0       	rjmp	.+8      	; 0x80a <__LOCK_REGION_LENGTH__+0x40a>
+			DDRB &= ~(1 << PB2);
+     802:	84 b1       	in	r24, 0x04	; 4
+     804:	8b 7f       	andi	r24, 0xFB	; 251
+     806:	84 b9       	out	0x04, r24	; 4
+     808:	08 95       	ret
+		else if(u8Mode == 1)
+     80a:	61 30       	cpi	r22, 0x01	; 1
+     80c:	d9 f4       	brne	.+54     	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB2);
+     80e:	84 b1       	in	r24, 0x04	; 4
+     810:	84 60       	ori	r24, 0x04	; 4
+     812:	84 b9       	out	0x04, r24	; 4
+     814:	08 95       	ret
+			break;
+		break;
+		
+		//set pin52	
+		case 52 :
+		if(u8Mode == 0)
+     816:	61 11       	cpse	r22, r1
+     818:	04 c0       	rjmp	.+8      	; 0x822 <__LOCK_REGION_LENGTH__+0x422>
+			DDRB &= ~(1 << PB1);
+     81a:	84 b1       	in	r24, 0x04	; 4
+     81c:	8d 7f       	andi	r24, 0xFD	; 253
+     81e:	84 b9       	out	0x04, r24	; 4
+     820:	08 95       	ret
+		else if(u8Mode == 1)
+     822:	61 30       	cpi	r22, 0x01	; 1
+     824:	79 f4       	brne	.+30     	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB1);
+     826:	84 b1       	in	r24, 0x04	; 4
+     828:	82 60       	ori	r24, 0x02	; 2
+     82a:	84 b9       	out	0x04, r24	; 4
+     82c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin53	
+		case 53 :
+		if(u8Mode == 0)
+     82e:	61 11       	cpse	r22, r1
+     830:	04 c0       	rjmp	.+8      	; 0x83a <__LOCK_REGION_LENGTH__+0x43a>
+			DDRB &= ~(1 << PB0);
+     832:	84 b1       	in	r24, 0x04	; 4
+     834:	8e 7f       	andi	r24, 0xFE	; 254
+     836:	84 b9       	out	0x04, r24	; 4
+     838:	08 95       	ret
+		else if(u8Mode == 1)
+     83a:	61 30       	cpi	r22, 0x01	; 1
+     83c:	19 f4       	brne	.+6      	; 0x844 <__LOCK_REGION_LENGTH__+0x444>
+			DDRB |= (1 << PB0);
+     83e:	84 b1       	in	r24, 0x04	; 4
+     840:	81 60       	ori	r24, 0x01	; 1
+     842:	84 b9       	out	0x04, r24	; 4
+     844:	08 95       	ret
+
+00000846 <gpio_vSetState>:
+			break;
+	}
+}
+
+void gpio_vSetState(uint8_t u8Pin, uint8_t u8Value){
+	switch(u8Pin){
+     846:	90 e0       	ldi	r25, 0x00	; 0
+     848:	86 33       	cpi	r24, 0x36	; 54
+     84a:	91 05       	cpc	r25, r1
+     84c:	08 f0       	brcs	.+2      	; 0x850 <gpio_vSetState+0xa>
+     84e:	fe c2       	rjmp	.+1532   	; 0xe4c <gpio_vSetState+0x606>
+     850:	fc 01       	movw	r30, r24
+     852:	88 27       	eor	r24, r24
+     854:	e8 55       	subi	r30, 0x58	; 88
+     856:	ff 4f       	sbci	r31, 0xFF	; 255
+     858:	8f 4f       	sbci	r24, 0xFF	; 255
+     85a:	3c c4       	rjmp	.+2168   	; 0x10d4 <__tablejump2__>
+		//set pin0
+		case 0 :
+		if(u8Value == 0)
+     85c:	61 11       	cpse	r22, r1
+     85e:	04 c0       	rjmp	.+8      	; 0x868 <gpio_vSetState+0x22>
+			PORTE &= ~(1 << PE0);
+     860:	8e b1       	in	r24, 0x0e	; 14
+     862:	8e 7f       	andi	r24, 0xFE	; 254
+     864:	8e b9       	out	0x0e, r24	; 14
+     866:	08 95       	ret
+		else if(u8Value == 1)
+     868:	61 30       	cpi	r22, 0x01	; 1
+     86a:	09 f0       	breq	.+2      	; 0x86e <gpio_vSetState+0x28>
+     86c:	ef c2       	rjmp	.+1502   	; 0xe4c <gpio_vSetState+0x606>
+			PORTE |= (1 << PE0);
+     86e:	8e b1       	in	r24, 0x0e	; 14
+     870:	81 60       	ori	r24, 0x01	; 1
+     872:	8e b9       	out	0x0e, r24	; 14
+     874:	08 95       	ret
+			break;
+		break;
+		
+		//set pin1
+		case 1 :
+		if(u8Value == 0)
+     876:	61 11       	cpse	r22, r1
+     878:	04 c0       	rjmp	.+8      	; 0x882 <gpio_vSetState+0x3c>
+			PORTE &= ~(1 << PE1);
+     87a:	8e b1       	in	r24, 0x0e	; 14
+     87c:	8d 7f       	andi	r24, 0xFD	; 253
+     87e:	8e b9       	out	0x0e, r24	; 14
+     880:	08 95       	ret
+		else if(u8Value == 1)
+     882:	61 30       	cpi	r22, 0x01	; 1
+     884:	09 f0       	breq	.+2      	; 0x888 <gpio_vSetState+0x42>
+     886:	e2 c2       	rjmp	.+1476   	; 0xe4c <gpio_vSetState+0x606>
+			PORTE |= (1 << PE1);
+     888:	8e b1       	in	r24, 0x0e	; 14
+     88a:	82 60       	ori	r24, 0x02	; 2
+     88c:	8e b9       	out	0x0e, r24	; 14
+     88e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin2
+		case 2 :
+		if(u8Value == 0)
+     890:	61 11       	cpse	r22, r1
+     892:	04 c0       	rjmp	.+8      	; 0x89c <gpio_vSetState+0x56>
+			PORTE &= ~(1 << PE4);
+     894:	8e b1       	in	r24, 0x0e	; 14
+     896:	8f 7e       	andi	r24, 0xEF	; 239
+     898:	8e b9       	out	0x0e, r24	; 14
+     89a:	08 95       	ret
+		else if(u8Value == 1)
+     89c:	61 30       	cpi	r22, 0x01	; 1
+     89e:	09 f0       	breq	.+2      	; 0x8a2 <gpio_vSetState+0x5c>
+     8a0:	d5 c2       	rjmp	.+1450   	; 0xe4c <gpio_vSetState+0x606>
+			PORTE |= (1 << PE4);
+     8a2:	8e b1       	in	r24, 0x0e	; 14
+     8a4:	80 61       	ori	r24, 0x10	; 16
+     8a6:	8e b9       	out	0x0e, r24	; 14
+     8a8:	08 95       	ret
+			break;
+		break;
+		
+		//set pin3
+		case 3 :
+		if(u8Value == 0)
+     8aa:	61 11       	cpse	r22, r1
+     8ac:	04 c0       	rjmp	.+8      	; 0x8b6 <gpio_vSetState+0x70>
+			PORTE &= ~(1 << PE5);
+     8ae:	8e b1       	in	r24, 0x0e	; 14
+     8b0:	8f 7d       	andi	r24, 0xDF	; 223
+     8b2:	8e b9       	out	0x0e, r24	; 14
+     8b4:	08 95       	ret
+		else if(u8Value == 1)
+     8b6:	61 30       	cpi	r22, 0x01	; 1
+     8b8:	09 f0       	breq	.+2      	; 0x8bc <gpio_vSetState+0x76>
+     8ba:	c8 c2       	rjmp	.+1424   	; 0xe4c <gpio_vSetState+0x606>
+			PORTE |= (1 << PE5);
+     8bc:	8e b1       	in	r24, 0x0e	; 14
+     8be:	80 62       	ori	r24, 0x20	; 32
+     8c0:	8e b9       	out	0x0e, r24	; 14
+     8c2:	08 95       	ret
+			break;
+		break;
+		
+		//set pin4
+		case 4 :
+		if(u8Value == 0)
+     8c4:	61 11       	cpse	r22, r1
+     8c6:	04 c0       	rjmp	.+8      	; 0x8d0 <gpio_vSetState+0x8a>
+			PORTG &= ~(1 << PG5);
+     8c8:	84 b3       	in	r24, 0x14	; 20
+     8ca:	8f 7d       	andi	r24, 0xDF	; 223
+     8cc:	84 bb       	out	0x14, r24	; 20
+     8ce:	08 95       	ret
+		else if(u8Value == 1)
+     8d0:	61 30       	cpi	r22, 0x01	; 1
+     8d2:	09 f0       	breq	.+2      	; 0x8d6 <gpio_vSetState+0x90>
+     8d4:	bb c2       	rjmp	.+1398   	; 0xe4c <gpio_vSetState+0x606>
+			PORTG |= (1 << PG5);
+     8d6:	84 b3       	in	r24, 0x14	; 20
+     8d8:	80 62       	ori	r24, 0x20	; 32
+     8da:	84 bb       	out	0x14, r24	; 20
+     8dc:	08 95       	ret
+			break;
+		break;
+		
+		//set pin5
+		case 5 :
+		if(u8Value == 0)
+     8de:	61 11       	cpse	r22, r1
+     8e0:	04 c0       	rjmp	.+8      	; 0x8ea <gpio_vSetState+0xa4>
+			PORTE &= ~(1 << PE3);
+     8e2:	8e b1       	in	r24, 0x0e	; 14
+     8e4:	87 7f       	andi	r24, 0xF7	; 247
+     8e6:	8e b9       	out	0x0e, r24	; 14
+     8e8:	08 95       	ret
+		else if(u8Value == 1)
+     8ea:	61 30       	cpi	r22, 0x01	; 1
+     8ec:	09 f0       	breq	.+2      	; 0x8f0 <gpio_vSetState+0xaa>
+     8ee:	ae c2       	rjmp	.+1372   	; 0xe4c <gpio_vSetState+0x606>
+			PORTE |= (1 << PE3);
+     8f0:	8e b1       	in	r24, 0x0e	; 14
+     8f2:	88 60       	ori	r24, 0x08	; 8
+     8f4:	8e b9       	out	0x0e, r24	; 14
+     8f6:	08 95       	ret
+			break;
+		break;
+		
+		//set pin6
+		case 6 :
+		if(u8Value == 0)
+     8f8:	61 11       	cpse	r22, r1
+     8fa:	06 c0       	rjmp	.+12     	; 0x908 <gpio_vSetState+0xc2>
+			PORTH &= ~(1 << PH3);
+     8fc:	e2 e0       	ldi	r30, 0x02	; 2
+     8fe:	f1 e0       	ldi	r31, 0x01	; 1
+     900:	80 81       	ld	r24, Z
+     902:	87 7f       	andi	r24, 0xF7	; 247
+     904:	80 83       	st	Z, r24
+     906:	08 95       	ret
+		else if(u8Value == 1)
+     908:	61 30       	cpi	r22, 0x01	; 1
+     90a:	09 f0       	breq	.+2      	; 0x90e <gpio_vSetState+0xc8>
+     90c:	9f c2       	rjmp	.+1342   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH3);
+     90e:	e2 e0       	ldi	r30, 0x02	; 2
+     910:	f1 e0       	ldi	r31, 0x01	; 1
+     912:	80 81       	ld	r24, Z
+     914:	88 60       	ori	r24, 0x08	; 8
+     916:	80 83       	st	Z, r24
+     918:	08 95       	ret
+			break;
+		break;
+		
+		//set pin7
+		case 7 :
+		if(u8Value == 0)
+     91a:	61 11       	cpse	r22, r1
+     91c:	06 c0       	rjmp	.+12     	; 0x92a <gpio_vSetState+0xe4>
+			PORTH &= ~(1 << PH4);
+     91e:	e2 e0       	ldi	r30, 0x02	; 2
+     920:	f1 e0       	ldi	r31, 0x01	; 1
+     922:	80 81       	ld	r24, Z
+     924:	8f 7e       	andi	r24, 0xEF	; 239
+     926:	80 83       	st	Z, r24
+     928:	08 95       	ret
+		else if(u8Value == 1)
+     92a:	61 30       	cpi	r22, 0x01	; 1
+     92c:	09 f0       	breq	.+2      	; 0x930 <gpio_vSetState+0xea>
+     92e:	8e c2       	rjmp	.+1308   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH4);
+     930:	e2 e0       	ldi	r30, 0x02	; 2
+     932:	f1 e0       	ldi	r31, 0x01	; 1
+     934:	80 81       	ld	r24, Z
+     936:	80 61       	ori	r24, 0x10	; 16
+     938:	80 83       	st	Z, r24
+     93a:	08 95       	ret
+		else
+			break;
+		break;
+		//set pin8
+		case 8 :
+		if(u8Value == 0)
+     93c:	61 11       	cpse	r22, r1
+     93e:	06 c0       	rjmp	.+12     	; 0x94c <gpio_vSetState+0x106>
+			PORTH &= ~(1 << PH5);
+     940:	e2 e0       	ldi	r30, 0x02	; 2
+     942:	f1 e0       	ldi	r31, 0x01	; 1
+     944:	80 81       	ld	r24, Z
+     946:	8f 7d       	andi	r24, 0xDF	; 223
+     948:	80 83       	st	Z, r24
+     94a:	08 95       	ret
+		else if(u8Value == 1)
+     94c:	61 30       	cpi	r22, 0x01	; 1
+     94e:	09 f0       	breq	.+2      	; 0x952 <gpio_vSetState+0x10c>
+     950:	7d c2       	rjmp	.+1274   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH5);
+     952:	e2 e0       	ldi	r30, 0x02	; 2
+     954:	f1 e0       	ldi	r31, 0x01	; 1
+     956:	80 81       	ld	r24, Z
+     958:	80 62       	ori	r24, 0x20	; 32
+     95a:	80 83       	st	Z, r24
+     95c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin9
+		case 9 :
+		if(u8Value == 0)
+     95e:	61 11       	cpse	r22, r1
+     960:	06 c0       	rjmp	.+12     	; 0x96e <gpio_vSetState+0x128>
+			PORTH &= ~(1 << PH6);
+     962:	e2 e0       	ldi	r30, 0x02	; 2
+     964:	f1 e0       	ldi	r31, 0x01	; 1
+     966:	80 81       	ld	r24, Z
+     968:	8f 7b       	andi	r24, 0xBF	; 191
+     96a:	80 83       	st	Z, r24
+     96c:	08 95       	ret
+		else if(u8Value == 1)
+     96e:	61 30       	cpi	r22, 0x01	; 1
+     970:	09 f0       	breq	.+2      	; 0x974 <gpio_vSetState+0x12e>
+     972:	6c c2       	rjmp	.+1240   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH6);
+     974:	e2 e0       	ldi	r30, 0x02	; 2
+     976:	f1 e0       	ldi	r31, 0x01	; 1
+     978:	80 81       	ld	r24, Z
+     97a:	80 64       	ori	r24, 0x40	; 64
+     97c:	80 83       	st	Z, r24
+     97e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin10
+		case 10 :
+		if(u8Value == 0)
+     980:	61 11       	cpse	r22, r1
+     982:	04 c0       	rjmp	.+8      	; 0x98c <gpio_vSetState+0x146>
+			PORTB &= ~(1 << PB4);
+     984:	85 b1       	in	r24, 0x05	; 5
+     986:	8f 7e       	andi	r24, 0xEF	; 239
+     988:	85 b9       	out	0x05, r24	; 5
+     98a:	08 95       	ret
+		else if(u8Value == 1)
+     98c:	61 30       	cpi	r22, 0x01	; 1
+     98e:	09 f0       	breq	.+2      	; 0x992 <gpio_vSetState+0x14c>
+     990:	5d c2       	rjmp	.+1210   	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB4);
+     992:	85 b1       	in	r24, 0x05	; 5
+     994:	80 61       	ori	r24, 0x10	; 16
+     996:	85 b9       	out	0x05, r24	; 5
+     998:	08 95       	ret
+			break;
+		break;
+		
+		//set pin11
+		case 11 :
+		if(u8Value == 0)
+     99a:	61 11       	cpse	r22, r1
+     99c:	04 c0       	rjmp	.+8      	; 0x9a6 <gpio_vSetState+0x160>
+			PORTB &= ~(1 << PB5);
+     99e:	85 b1       	in	r24, 0x05	; 5
+     9a0:	8f 7d       	andi	r24, 0xDF	; 223
+     9a2:	85 b9       	out	0x05, r24	; 5
+     9a4:	08 95       	ret
+		else if(u8Value == 1)
+     9a6:	61 30       	cpi	r22, 0x01	; 1
+     9a8:	09 f0       	breq	.+2      	; 0x9ac <gpio_vSetState+0x166>
+     9aa:	50 c2       	rjmp	.+1184   	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB5);
+     9ac:	85 b1       	in	r24, 0x05	; 5
+     9ae:	80 62       	ori	r24, 0x20	; 32
+     9b0:	85 b9       	out	0x05, r24	; 5
+     9b2:	08 95       	ret
+			break;
+		break;
+		
+		//set pin12
+		case 12 :
+		if(u8Value == 0)
+     9b4:	61 11       	cpse	r22, r1
+     9b6:	04 c0       	rjmp	.+8      	; 0x9c0 <gpio_vSetState+0x17a>
+			PORTB &= ~(1 << PB6);
+     9b8:	85 b1       	in	r24, 0x05	; 5
+     9ba:	8f 7b       	andi	r24, 0xBF	; 191
+     9bc:	85 b9       	out	0x05, r24	; 5
+     9be:	08 95       	ret
+		else if(u8Value == 1)
+     9c0:	61 30       	cpi	r22, 0x01	; 1
+     9c2:	09 f0       	breq	.+2      	; 0x9c6 <gpio_vSetState+0x180>
+     9c4:	43 c2       	rjmp	.+1158   	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB6);
+     9c6:	85 b1       	in	r24, 0x05	; 5
+     9c8:	80 64       	ori	r24, 0x40	; 64
+     9ca:	85 b9       	out	0x05, r24	; 5
+     9cc:	08 95       	ret
+		break;
+		break;
+		
+		//set pin13
+		case 13 :
+		if(u8Value == 0)
+     9ce:	61 11       	cpse	r22, r1
+     9d0:	04 c0       	rjmp	.+8      	; 0x9da <gpio_vSetState+0x194>
+			PORTB &= ~(1 << PB7);
+     9d2:	85 b1       	in	r24, 0x05	; 5
+     9d4:	8f 77       	andi	r24, 0x7F	; 127
+     9d6:	85 b9       	out	0x05, r24	; 5
+     9d8:	08 95       	ret
+		else if(u8Value == 1)
+     9da:	61 30       	cpi	r22, 0x01	; 1
+     9dc:	09 f0       	breq	.+2      	; 0x9e0 <gpio_vSetState+0x19a>
+     9de:	36 c2       	rjmp	.+1132   	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB7);
+     9e0:	85 b1       	in	r24, 0x05	; 5
+     9e2:	80 68       	ori	r24, 0x80	; 128
+     9e4:	85 b9       	out	0x05, r24	; 5
+     9e6:	08 95       	ret
+			break;
+		break;
+		
+		//set pin14
+		case 14 :
+		if(u8Value == 0)
+     9e8:	61 11       	cpse	r22, r1
+     9ea:	06 c0       	rjmp	.+12     	; 0x9f8 <gpio_vSetState+0x1b2>
+			PORTJ &= ~(1 << PJ1);
+     9ec:	e5 e0       	ldi	r30, 0x05	; 5
+     9ee:	f1 e0       	ldi	r31, 0x01	; 1
+     9f0:	80 81       	ld	r24, Z
+     9f2:	8d 7f       	andi	r24, 0xFD	; 253
+     9f4:	80 83       	st	Z, r24
+     9f6:	08 95       	ret
+		else if(u8Value == 1)
+     9f8:	61 30       	cpi	r22, 0x01	; 1
+     9fa:	09 f0       	breq	.+2      	; 0x9fe <gpio_vSetState+0x1b8>
+     9fc:	27 c2       	rjmp	.+1102   	; 0xe4c <gpio_vSetState+0x606>
+			PORTJ |= (1 << PJ1);
+     9fe:	e5 e0       	ldi	r30, 0x05	; 5
+     a00:	f1 e0       	ldi	r31, 0x01	; 1
+     a02:	80 81       	ld	r24, Z
+     a04:	82 60       	ori	r24, 0x02	; 2
+     a06:	80 83       	st	Z, r24
+     a08:	08 95       	ret
+			break;
+		break;
+		
+		//set pin15
+		case 15 :
+		if(u8Value == 0)
+     a0a:	61 11       	cpse	r22, r1
+     a0c:	06 c0       	rjmp	.+12     	; 0xa1a <gpio_vSetState+0x1d4>
+			PORTJ &= ~(1 << PJ0);
+     a0e:	e5 e0       	ldi	r30, 0x05	; 5
+     a10:	f1 e0       	ldi	r31, 0x01	; 1
+     a12:	80 81       	ld	r24, Z
+     a14:	8e 7f       	andi	r24, 0xFE	; 254
+     a16:	80 83       	st	Z, r24
+     a18:	08 95       	ret
+		else if(u8Value == 1)
+     a1a:	61 30       	cpi	r22, 0x01	; 1
+     a1c:	09 f0       	breq	.+2      	; 0xa20 <gpio_vSetState+0x1da>
+     a1e:	16 c2       	rjmp	.+1068   	; 0xe4c <gpio_vSetState+0x606>
+			PORTJ |= (1 << PJ0);
+     a20:	e5 e0       	ldi	r30, 0x05	; 5
+     a22:	f1 e0       	ldi	r31, 0x01	; 1
+     a24:	80 81       	ld	r24, Z
+     a26:	81 60       	ori	r24, 0x01	; 1
+     a28:	80 83       	st	Z, r24
+     a2a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin16
+		case 16 :
+		if(u8Value == 0)
+     a2c:	61 11       	cpse	r22, r1
+     a2e:	06 c0       	rjmp	.+12     	; 0xa3c <gpio_vSetState+0x1f6>
+			PORTH &= ~(1 << PH1);
+     a30:	e2 e0       	ldi	r30, 0x02	; 2
+     a32:	f1 e0       	ldi	r31, 0x01	; 1
+     a34:	80 81       	ld	r24, Z
+     a36:	8d 7f       	andi	r24, 0xFD	; 253
+     a38:	80 83       	st	Z, r24
+     a3a:	08 95       	ret
+		else if(u8Value == 1)
+     a3c:	61 30       	cpi	r22, 0x01	; 1
+     a3e:	09 f0       	breq	.+2      	; 0xa42 <gpio_vSetState+0x1fc>
+     a40:	05 c2       	rjmp	.+1034   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH1);
+     a42:	e2 e0       	ldi	r30, 0x02	; 2
+     a44:	f1 e0       	ldi	r31, 0x01	; 1
+     a46:	80 81       	ld	r24, Z
+     a48:	82 60       	ori	r24, 0x02	; 2
+     a4a:	80 83       	st	Z, r24
+     a4c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin17
+		case 17 :
+		if(u8Value == 0)
+     a4e:	61 11       	cpse	r22, r1
+     a50:	06 c0       	rjmp	.+12     	; 0xa5e <gpio_vSetState+0x218>
+			PORTH &= ~(1 << PH0);
+     a52:	e2 e0       	ldi	r30, 0x02	; 2
+     a54:	f1 e0       	ldi	r31, 0x01	; 1
+     a56:	80 81       	ld	r24, Z
+     a58:	8e 7f       	andi	r24, 0xFE	; 254
+     a5a:	80 83       	st	Z, r24
+     a5c:	08 95       	ret
+		else if(u8Value == 1)
+     a5e:	61 30       	cpi	r22, 0x01	; 1
+     a60:	09 f0       	breq	.+2      	; 0xa64 <gpio_vSetState+0x21e>
+     a62:	f4 c1       	rjmp	.+1000   	; 0xe4c <gpio_vSetState+0x606>
+			PORTH |= (1 << PH0);
+     a64:	e2 e0       	ldi	r30, 0x02	; 2
+     a66:	f1 e0       	ldi	r31, 0x01	; 1
+     a68:	80 81       	ld	r24, Z
+     a6a:	81 60       	ori	r24, 0x01	; 1
+     a6c:	80 83       	st	Z, r24
+     a6e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin18
+		case 18 :
+		if(u8Value == 0)
+     a70:	61 11       	cpse	r22, r1
+     a72:	04 c0       	rjmp	.+8      	; 0xa7c <gpio_vSetState+0x236>
+			PORTD &= ~(1 << PD3);
+     a74:	8b b1       	in	r24, 0x0b	; 11
+     a76:	87 7f       	andi	r24, 0xF7	; 247
+     a78:	8b b9       	out	0x0b, r24	; 11
+     a7a:	08 95       	ret
+		else if(u8Value == 1)
+     a7c:	61 30       	cpi	r22, 0x01	; 1
+     a7e:	09 f0       	breq	.+2      	; 0xa82 <gpio_vSetState+0x23c>
+     a80:	e5 c1       	rjmp	.+970    	; 0xe4c <gpio_vSetState+0x606>
+			PORTD |= (1 << PD3);
+     a82:	8b b1       	in	r24, 0x0b	; 11
+     a84:	88 60       	ori	r24, 0x08	; 8
+     a86:	8b b9       	out	0x0b, r24	; 11
+     a88:	08 95       	ret
+			break;
+		break;
+		
+		//set pin19
+		case 19 :
+		if(u8Value == 0)
+     a8a:	61 11       	cpse	r22, r1
+     a8c:	04 c0       	rjmp	.+8      	; 0xa96 <gpio_vSetState+0x250>
+			PORTD &= ~(1 << PD2);
+     a8e:	8b b1       	in	r24, 0x0b	; 11
+     a90:	8b 7f       	andi	r24, 0xFB	; 251
+     a92:	8b b9       	out	0x0b, r24	; 11
+     a94:	08 95       	ret
+		else if(u8Value == 1)
+     a96:	61 30       	cpi	r22, 0x01	; 1
+     a98:	09 f0       	breq	.+2      	; 0xa9c <gpio_vSetState+0x256>
+     a9a:	d8 c1       	rjmp	.+944    	; 0xe4c <gpio_vSetState+0x606>
+			PORTD |= (1 << PD2);
+     a9c:	8b b1       	in	r24, 0x0b	; 11
+     a9e:	84 60       	ori	r24, 0x04	; 4
+     aa0:	8b b9       	out	0x0b, r24	; 11
+     aa2:	08 95       	ret
+			break;
+		break;
+		
+		//set pin20
+		case 20 :
+		if(u8Value == 0)
+     aa4:	61 11       	cpse	r22, r1
+     aa6:	04 c0       	rjmp	.+8      	; 0xab0 <gpio_vSetState+0x26a>
+			PORTD &= ~(1 << PD1);
+     aa8:	8b b1       	in	r24, 0x0b	; 11
+     aaa:	8d 7f       	andi	r24, 0xFD	; 253
+     aac:	8b b9       	out	0x0b, r24	; 11
+     aae:	08 95       	ret
+		else if(u8Value == 1)
+     ab0:	61 30       	cpi	r22, 0x01	; 1
+     ab2:	09 f0       	breq	.+2      	; 0xab6 <gpio_vSetState+0x270>
+     ab4:	cb c1       	rjmp	.+918    	; 0xe4c <gpio_vSetState+0x606>
+			PORTD |= (1 << PD1);
+     ab6:	8b b1       	in	r24, 0x0b	; 11
+     ab8:	82 60       	ori	r24, 0x02	; 2
+     aba:	8b b9       	out	0x0b, r24	; 11
+     abc:	08 95       	ret
+			break;
+		break;
+		
+		//set pin21
+		case 21 :
+		if(u8Value == 0)
+     abe:	61 11       	cpse	r22, r1
+     ac0:	04 c0       	rjmp	.+8      	; 0xaca <gpio_vSetState+0x284>
+			PORTD &= ~(1 << PD0);
+     ac2:	8b b1       	in	r24, 0x0b	; 11
+     ac4:	8e 7f       	andi	r24, 0xFE	; 254
+     ac6:	8b b9       	out	0x0b, r24	; 11
+     ac8:	08 95       	ret
+		else if(u8Value == 1)
+     aca:	61 30       	cpi	r22, 0x01	; 1
+     acc:	09 f0       	breq	.+2      	; 0xad0 <gpio_vSetState+0x28a>
+     ace:	be c1       	rjmp	.+892    	; 0xe4c <gpio_vSetState+0x606>
+			PORTD |= (1 << PD0);
+     ad0:	8b b1       	in	r24, 0x0b	; 11
+     ad2:	81 60       	ori	r24, 0x01	; 1
+     ad4:	8b b9       	out	0x0b, r24	; 11
+     ad6:	08 95       	ret
+			break;
+		break;
+		
+		//set pin22
+		case 22 :
+		if(u8Value == 0)
+     ad8:	61 11       	cpse	r22, r1
+     ada:	04 c0       	rjmp	.+8      	; 0xae4 <gpio_vSetState+0x29e>
+			PORTA &= ~(1 << PA0);
+     adc:	82 b1       	in	r24, 0x02	; 2
+     ade:	8e 7f       	andi	r24, 0xFE	; 254
+     ae0:	82 b9       	out	0x02, r24	; 2
+     ae2:	08 95       	ret
+		else if(u8Value == 1)
+     ae4:	61 30       	cpi	r22, 0x01	; 1
+     ae6:	09 f0       	breq	.+2      	; 0xaea <gpio_vSetState+0x2a4>
+     ae8:	b1 c1       	rjmp	.+866    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA0);
+     aea:	82 b1       	in	r24, 0x02	; 2
+     aec:	81 60       	ori	r24, 0x01	; 1
+     aee:	82 b9       	out	0x02, r24	; 2
+     af0:	08 95       	ret
+			break;
+		break;
+		
+		//set pin23
+		case 23 :
+		if(u8Value == 0)
+     af2:	61 11       	cpse	r22, r1
+     af4:	04 c0       	rjmp	.+8      	; 0xafe <gpio_vSetState+0x2b8>
+			PORTA &= ~(1 << PA1);
+     af6:	82 b1       	in	r24, 0x02	; 2
+     af8:	8d 7f       	andi	r24, 0xFD	; 253
+     afa:	82 b9       	out	0x02, r24	; 2
+     afc:	08 95       	ret
+		else if(u8Value == 1)
+     afe:	61 30       	cpi	r22, 0x01	; 1
+     b00:	09 f0       	breq	.+2      	; 0xb04 <gpio_vSetState+0x2be>
+     b02:	a4 c1       	rjmp	.+840    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA1);
+     b04:	82 b1       	in	r24, 0x02	; 2
+     b06:	82 60       	ori	r24, 0x02	; 2
+     b08:	82 b9       	out	0x02, r24	; 2
+     b0a:	08 95       	ret
+			break;
+		break;
+		
+		//set pin24
+		case 24 :
+		if(u8Value == 0)
+     b0c:	61 11       	cpse	r22, r1
+     b0e:	04 c0       	rjmp	.+8      	; 0xb18 <gpio_vSetState+0x2d2>
+			PORTA &= ~(1 << PA2);
+     b10:	82 b1       	in	r24, 0x02	; 2
+     b12:	8b 7f       	andi	r24, 0xFB	; 251
+     b14:	82 b9       	out	0x02, r24	; 2
+     b16:	08 95       	ret
+		else if(u8Value == 1)
+     b18:	61 30       	cpi	r22, 0x01	; 1
+     b1a:	09 f0       	breq	.+2      	; 0xb1e <gpio_vSetState+0x2d8>
+     b1c:	97 c1       	rjmp	.+814    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA2);
+     b1e:	82 b1       	in	r24, 0x02	; 2
+     b20:	84 60       	ori	r24, 0x04	; 4
+     b22:	82 b9       	out	0x02, r24	; 2
+     b24:	08 95       	ret
+			break;
+		break;
+		
+		//set pin25
+		case 25 :
+		if(u8Value == 0)
+     b26:	61 11       	cpse	r22, r1
+     b28:	04 c0       	rjmp	.+8      	; 0xb32 <gpio_vSetState+0x2ec>
+			PORTA &= ~(1 << PA3);
+     b2a:	82 b1       	in	r24, 0x02	; 2
+     b2c:	87 7f       	andi	r24, 0xF7	; 247
+     b2e:	82 b9       	out	0x02, r24	; 2
+     b30:	08 95       	ret
+		else if(u8Value == 1)
+     b32:	61 30       	cpi	r22, 0x01	; 1
+     b34:	09 f0       	breq	.+2      	; 0xb38 <gpio_vSetState+0x2f2>
+     b36:	8a c1       	rjmp	.+788    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA3);
+     b38:	82 b1       	in	r24, 0x02	; 2
+     b3a:	88 60       	ori	r24, 0x08	; 8
+     b3c:	82 b9       	out	0x02, r24	; 2
+     b3e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin26
+		case 26 :
+		if(u8Value == 0)
+     b40:	61 11       	cpse	r22, r1
+     b42:	04 c0       	rjmp	.+8      	; 0xb4c <gpio_vSetState+0x306>
+			PORTA &= ~(1 << PA4);
+     b44:	82 b1       	in	r24, 0x02	; 2
+     b46:	8f 7e       	andi	r24, 0xEF	; 239
+     b48:	82 b9       	out	0x02, r24	; 2
+     b4a:	08 95       	ret
+		else if(u8Value == 1)
+     b4c:	61 30       	cpi	r22, 0x01	; 1
+     b4e:	09 f0       	breq	.+2      	; 0xb52 <gpio_vSetState+0x30c>
+     b50:	7d c1       	rjmp	.+762    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA4);
+     b52:	82 b1       	in	r24, 0x02	; 2
+     b54:	80 61       	ori	r24, 0x10	; 16
+     b56:	82 b9       	out	0x02, r24	; 2
+     b58:	08 95       	ret
+			break;
+		break;
+		
+		//set pin27
+		case 27 :
+		if(u8Value == 0)
+     b5a:	61 11       	cpse	r22, r1
+     b5c:	04 c0       	rjmp	.+8      	; 0xb66 <gpio_vSetState+0x320>
+			PORTA &= ~(1 << PA5);
+     b5e:	82 b1       	in	r24, 0x02	; 2
+     b60:	8f 7d       	andi	r24, 0xDF	; 223
+     b62:	82 b9       	out	0x02, r24	; 2
+     b64:	08 95       	ret
+		else if(u8Value == 1)
+     b66:	61 30       	cpi	r22, 0x01	; 1
+     b68:	09 f0       	breq	.+2      	; 0xb6c <gpio_vSetState+0x326>
+     b6a:	70 c1       	rjmp	.+736    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA5);
+     b6c:	82 b1       	in	r24, 0x02	; 2
+     b6e:	80 62       	ori	r24, 0x20	; 32
+     b70:	82 b9       	out	0x02, r24	; 2
+     b72:	08 95       	ret
+			break;
+		break;
+		
+		//set pin28
+		case 28 :
+		if(u8Value == 0)
+     b74:	61 11       	cpse	r22, r1
+     b76:	04 c0       	rjmp	.+8      	; 0xb80 <gpio_vSetState+0x33a>
+			PORTA &= ~(1 << PA6);
+     b78:	82 b1       	in	r24, 0x02	; 2
+     b7a:	8f 7b       	andi	r24, 0xBF	; 191
+     b7c:	82 b9       	out	0x02, r24	; 2
+     b7e:	08 95       	ret
+		else if(u8Value == 1)
+     b80:	61 30       	cpi	r22, 0x01	; 1
+     b82:	09 f0       	breq	.+2      	; 0xb86 <gpio_vSetState+0x340>
+     b84:	63 c1       	rjmp	.+710    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA6);
+     b86:	82 b1       	in	r24, 0x02	; 2
+     b88:	80 64       	ori	r24, 0x40	; 64
+     b8a:	82 b9       	out	0x02, r24	; 2
+     b8c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin29
+		case 29 :
+		if(u8Value == 0)
+     b8e:	61 11       	cpse	r22, r1
+     b90:	04 c0       	rjmp	.+8      	; 0xb9a <gpio_vSetState+0x354>
+			PORTA &= ~(1 << PA7);
+     b92:	82 b1       	in	r24, 0x02	; 2
+     b94:	8f 77       	andi	r24, 0x7F	; 127
+     b96:	82 b9       	out	0x02, r24	; 2
+     b98:	08 95       	ret
+		else if(u8Value == 1)
+     b9a:	61 30       	cpi	r22, 0x01	; 1
+     b9c:	09 f0       	breq	.+2      	; 0xba0 <gpio_vSetState+0x35a>
+     b9e:	56 c1       	rjmp	.+684    	; 0xe4c <gpio_vSetState+0x606>
+			PORTA |= (1 << PA7);
+     ba0:	82 b1       	in	r24, 0x02	; 2
+     ba2:	80 68       	ori	r24, 0x80	; 128
+     ba4:	82 b9       	out	0x02, r24	; 2
+     ba6:	08 95       	ret
+			break;
+		break;
+		
+		//set pin30
+		case 30 :
+		if(u8Value == 0)
+     ba8:	61 11       	cpse	r22, r1
+     baa:	04 c0       	rjmp	.+8      	; 0xbb4 <gpio_vSetState+0x36e>
+			PORTC &= ~(1 << PC7);
+     bac:	88 b1       	in	r24, 0x08	; 8
+     bae:	8f 77       	andi	r24, 0x7F	; 127
+     bb0:	88 b9       	out	0x08, r24	; 8
+     bb2:	08 95       	ret
+		else if(u8Value == 1)
+     bb4:	61 30       	cpi	r22, 0x01	; 1
+     bb6:	09 f0       	breq	.+2      	; 0xbba <gpio_vSetState+0x374>
+     bb8:	49 c1       	rjmp	.+658    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC7);
+     bba:	88 b1       	in	r24, 0x08	; 8
+     bbc:	80 68       	ori	r24, 0x80	; 128
+     bbe:	88 b9       	out	0x08, r24	; 8
+     bc0:	08 95       	ret
+			break;
+		break;
+		
+		//set pin31
+		case 31 :
+		if(u8Value == 0)
+     bc2:	61 11       	cpse	r22, r1
+     bc4:	04 c0       	rjmp	.+8      	; 0xbce <gpio_vSetState+0x388>
+			PORTC &= ~(1 << PC6);
+     bc6:	88 b1       	in	r24, 0x08	; 8
+     bc8:	8f 7b       	andi	r24, 0xBF	; 191
+     bca:	88 b9       	out	0x08, r24	; 8
+     bcc:	08 95       	ret
+		else if(u8Value == 1)
+     bce:	61 30       	cpi	r22, 0x01	; 1
+     bd0:	09 f0       	breq	.+2      	; 0xbd4 <gpio_vSetState+0x38e>
+     bd2:	3c c1       	rjmp	.+632    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC6);
+     bd4:	88 b1       	in	r24, 0x08	; 8
+     bd6:	80 64       	ori	r24, 0x40	; 64
+     bd8:	88 b9       	out	0x08, r24	; 8
+     bda:	08 95       	ret
+			break;
+		break;
+		
+		//set pin32
+		case 32 :
+		if(u8Value == 0)
+     bdc:	61 11       	cpse	r22, r1
+     bde:	04 c0       	rjmp	.+8      	; 0xbe8 <gpio_vSetState+0x3a2>
+			PORTC &= ~(1 << PC5);
+     be0:	88 b1       	in	r24, 0x08	; 8
+     be2:	8f 7d       	andi	r24, 0xDF	; 223
+     be4:	88 b9       	out	0x08, r24	; 8
+     be6:	08 95       	ret
+		else if(u8Value == 1)
+     be8:	61 30       	cpi	r22, 0x01	; 1
+     bea:	09 f0       	breq	.+2      	; 0xbee <gpio_vSetState+0x3a8>
+     bec:	2f c1       	rjmp	.+606    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC5);
+     bee:	88 b1       	in	r24, 0x08	; 8
+     bf0:	80 62       	ori	r24, 0x20	; 32
+     bf2:	88 b9       	out	0x08, r24	; 8
+     bf4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin33
+		case 33 :
+		if(u8Value == 0)
+     bf6:	61 11       	cpse	r22, r1
+     bf8:	04 c0       	rjmp	.+8      	; 0xc02 <gpio_vSetState+0x3bc>
+			PORTC &= ~(1 << PC4);
+     bfa:	88 b1       	in	r24, 0x08	; 8
+     bfc:	8f 7e       	andi	r24, 0xEF	; 239
+     bfe:	88 b9       	out	0x08, r24	; 8
+     c00:	08 95       	ret
+		else if(u8Value == 1)
+     c02:	61 30       	cpi	r22, 0x01	; 1
+     c04:	09 f0       	breq	.+2      	; 0xc08 <gpio_vSetState+0x3c2>
+     c06:	22 c1       	rjmp	.+580    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC4);
+     c08:	88 b1       	in	r24, 0x08	; 8
+     c0a:	80 61       	ori	r24, 0x10	; 16
+     c0c:	88 b9       	out	0x08, r24	; 8
+     c0e:	08 95       	ret
+			break;
+		break;
+		
+		//set pin34
+		case 34 :
+		if(u8Value == 0)
+     c10:	61 11       	cpse	r22, r1
+     c12:	04 c0       	rjmp	.+8      	; 0xc1c <gpio_vSetState+0x3d6>
+			PORTC &= ~(1 << PC3);
+     c14:	88 b1       	in	r24, 0x08	; 8
+     c16:	87 7f       	andi	r24, 0xF7	; 247
+     c18:	88 b9       	out	0x08, r24	; 8
+     c1a:	08 95       	ret
+		else if(u8Value == 1)
+     c1c:	61 30       	cpi	r22, 0x01	; 1
+     c1e:	09 f0       	breq	.+2      	; 0xc22 <gpio_vSetState+0x3dc>
+     c20:	15 c1       	rjmp	.+554    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC3);
+     c22:	88 b1       	in	r24, 0x08	; 8
+     c24:	88 60       	ori	r24, 0x08	; 8
+     c26:	88 b9       	out	0x08, r24	; 8
+     c28:	08 95       	ret
+			break;
+		break;
+		
+		//set pin35
+		case 35 :
+		if(u8Value == 0)
+     c2a:	61 11       	cpse	r22, r1
+     c2c:	04 c0       	rjmp	.+8      	; 0xc36 <gpio_vSetState+0x3f0>
+			PORTC &= ~(1 << PC2);
+     c2e:	88 b1       	in	r24, 0x08	; 8
+     c30:	8b 7f       	andi	r24, 0xFB	; 251
+     c32:	88 b9       	out	0x08, r24	; 8
+     c34:	08 95       	ret
+		else if(u8Value == 1)
+     c36:	61 30       	cpi	r22, 0x01	; 1
+     c38:	09 f0       	breq	.+2      	; 0xc3c <gpio_vSetState+0x3f6>
+     c3a:	08 c1       	rjmp	.+528    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC2);
+     c3c:	88 b1       	in	r24, 0x08	; 8
+     c3e:	84 60       	ori	r24, 0x04	; 4
+     c40:	88 b9       	out	0x08, r24	; 8
+     c42:	08 95       	ret
+			break;
+		break;
+		
+		//set pin36
+		case 36 :
+		if(u8Value == 0)
+     c44:	61 11       	cpse	r22, r1
+     c46:	04 c0       	rjmp	.+8      	; 0xc50 <gpio_vSetState+0x40a>
+			PORTC &= ~(1 << PC1);
+     c48:	88 b1       	in	r24, 0x08	; 8
+     c4a:	8d 7f       	andi	r24, 0xFD	; 253
+     c4c:	88 b9       	out	0x08, r24	; 8
+     c4e:	08 95       	ret
+		else if(u8Value == 1)
+     c50:	61 30       	cpi	r22, 0x01	; 1
+     c52:	09 f0       	breq	.+2      	; 0xc56 <gpio_vSetState+0x410>
+     c54:	fb c0       	rjmp	.+502    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC1);
+     c56:	88 b1       	in	r24, 0x08	; 8
+     c58:	82 60       	ori	r24, 0x02	; 2
+     c5a:	88 b9       	out	0x08, r24	; 8
+     c5c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin37
+		case 37 :
+		if(u8Value == 0)
+     c5e:	61 11       	cpse	r22, r1
+     c60:	04 c0       	rjmp	.+8      	; 0xc6a <gpio_vSetState+0x424>
+			PORTC &= ~(1 << PC0);
+     c62:	88 b1       	in	r24, 0x08	; 8
+     c64:	8e 7f       	andi	r24, 0xFE	; 254
+     c66:	88 b9       	out	0x08, r24	; 8
+     c68:	08 95       	ret
+		else if(u8Value == 1)
+     c6a:	61 30       	cpi	r22, 0x01	; 1
+     c6c:	09 f0       	breq	.+2      	; 0xc70 <gpio_vSetState+0x42a>
+     c6e:	ee c0       	rjmp	.+476    	; 0xe4c <gpio_vSetState+0x606>
+			PORTC |= (1 << PC0);
+     c70:	88 b1       	in	r24, 0x08	; 8
+     c72:	81 60       	ori	r24, 0x01	; 1
+     c74:	88 b9       	out	0x08, r24	; 8
+     c76:	08 95       	ret
+			break;
+		break;
+		
+		//set pin38
+		case 38 :
+		if(u8Value == 0)
+     c78:	61 11       	cpse	r22, r1
+     c7a:	04 c0       	rjmp	.+8      	; 0xc84 <gpio_vSetState+0x43e>
+			PORTD &= ~(1 << PD7);
+     c7c:	8b b1       	in	r24, 0x0b	; 11
+     c7e:	8f 77       	andi	r24, 0x7F	; 127
+     c80:	8b b9       	out	0x0b, r24	; 11
+     c82:	08 95       	ret
+		else if(u8Value == 1)
+     c84:	61 30       	cpi	r22, 0x01	; 1
+     c86:	09 f0       	breq	.+2      	; 0xc8a <gpio_vSetState+0x444>
+     c88:	e1 c0       	rjmp	.+450    	; 0xe4c <gpio_vSetState+0x606>
+			PORTD |= (1 << PD7);
+     c8a:	8b b1       	in	r24, 0x0b	; 11
+     c8c:	80 68       	ori	r24, 0x80	; 128
+     c8e:	8b b9       	out	0x0b, r24	; 11
+     c90:	08 95       	ret
+			break;
+		break;
+		
+		//set pin39
+		case 39 :
+		if(u8Value == 0)
+     c92:	61 11       	cpse	r22, r1
+     c94:	04 c0       	rjmp	.+8      	; 0xc9e <gpio_vSetState+0x458>
+			PORTG &= ~(1 << PG2);
+     c96:	84 b3       	in	r24, 0x14	; 20
+     c98:	8b 7f       	andi	r24, 0xFB	; 251
+     c9a:	84 bb       	out	0x14, r24	; 20
+     c9c:	08 95       	ret
+		else if(u8Value == 1)
+     c9e:	61 30       	cpi	r22, 0x01	; 1
+     ca0:	09 f0       	breq	.+2      	; 0xca4 <gpio_vSetState+0x45e>
+     ca2:	d4 c0       	rjmp	.+424    	; 0xe4c <gpio_vSetState+0x606>
+			PORTG |= (1 << PG2);
+     ca4:	84 b3       	in	r24, 0x14	; 20
+     ca6:	84 60       	ori	r24, 0x04	; 4
+     ca8:	84 bb       	out	0x14, r24	; 20
+     caa:	08 95       	ret
+			break;
+		break;
+		
+		//set pin40
+		case 40 :
+		if(u8Value == 0)
+     cac:	61 11       	cpse	r22, r1
+     cae:	04 c0       	rjmp	.+8      	; 0xcb8 <gpio_vSetState+0x472>
+			PORTG &= ~(1 << PG1);
+     cb0:	84 b3       	in	r24, 0x14	; 20
+     cb2:	8d 7f       	andi	r24, 0xFD	; 253
+     cb4:	84 bb       	out	0x14, r24	; 20
+     cb6:	08 95       	ret
+		else if(u8Value == 1)
+     cb8:	61 30       	cpi	r22, 0x01	; 1
+     cba:	09 f0       	breq	.+2      	; 0xcbe <gpio_vSetState+0x478>
+     cbc:	c7 c0       	rjmp	.+398    	; 0xe4c <gpio_vSetState+0x606>
+			PORTG |= (1 << PG1);
+     cbe:	84 b3       	in	r24, 0x14	; 20
+     cc0:	82 60       	ori	r24, 0x02	; 2
+     cc2:	84 bb       	out	0x14, r24	; 20
+     cc4:	08 95       	ret
+			break;
+		break;
+		
+		//set pin41
+		case 41 :
+		if(u8Value == 0)
+     cc6:	61 11       	cpse	r22, r1
+     cc8:	04 c0       	rjmp	.+8      	; 0xcd2 <gpio_vSetState+0x48c>
+			PORTG &= ~(1 << PG0);
+     cca:	84 b3       	in	r24, 0x14	; 20
+     ccc:	8e 7f       	andi	r24, 0xFE	; 254
+     cce:	84 bb       	out	0x14, r24	; 20
+     cd0:	08 95       	ret
+		else if(u8Value == 1)
+     cd2:	61 30       	cpi	r22, 0x01	; 1
+     cd4:	09 f0       	breq	.+2      	; 0xcd8 <gpio_vSetState+0x492>
+     cd6:	ba c0       	rjmp	.+372    	; 0xe4c <gpio_vSetState+0x606>
+			PORTG |= (1 << PG0);
+     cd8:	84 b3       	in	r24, 0x14	; 20
+     cda:	81 60       	ori	r24, 0x01	; 1
+     cdc:	84 bb       	out	0x14, r24	; 20
+     cde:	08 95       	ret
+			break;
+		break;
+		
+		//set pin42
+		case 42 :
+		if(u8Value == 0)
+     ce0:	61 11       	cpse	r22, r1
+     ce2:	06 c0       	rjmp	.+12     	; 0xcf0 <gpio_vSetState+0x4aa>
+			PORTL &= ~(1 << PL7);
+     ce4:	eb e0       	ldi	r30, 0x0B	; 11
+     ce6:	f1 e0       	ldi	r31, 0x01	; 1
+     ce8:	80 81       	ld	r24, Z
+     cea:	8f 77       	andi	r24, 0x7F	; 127
+     cec:	80 83       	st	Z, r24
+     cee:	08 95       	ret
+		else if(u8Value == 1)
+     cf0:	61 30       	cpi	r22, 0x01	; 1
+     cf2:	09 f0       	breq	.+2      	; 0xcf6 <gpio_vSetState+0x4b0>
+     cf4:	ab c0       	rjmp	.+342    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL7);
+     cf6:	eb e0       	ldi	r30, 0x0B	; 11
+     cf8:	f1 e0       	ldi	r31, 0x01	; 1
+     cfa:	80 81       	ld	r24, Z
+     cfc:	80 68       	ori	r24, 0x80	; 128
+     cfe:	80 83       	st	Z, r24
+     d00:	08 95       	ret
+			break;
+		break;
+		
+		//set pin43
+		case 43 :
+		if(u8Value == 0)
+     d02:	61 11       	cpse	r22, r1
+     d04:	06 c0       	rjmp	.+12     	; 0xd12 <gpio_vSetState+0x4cc>
+			PORTL &= ~(1 << PL6);
+     d06:	eb e0       	ldi	r30, 0x0B	; 11
+     d08:	f1 e0       	ldi	r31, 0x01	; 1
+     d0a:	80 81       	ld	r24, Z
+     d0c:	8f 7b       	andi	r24, 0xBF	; 191
+     d0e:	80 83       	st	Z, r24
+     d10:	08 95       	ret
+		else if(u8Value == 1)
+     d12:	61 30       	cpi	r22, 0x01	; 1
+     d14:	09 f0       	breq	.+2      	; 0xd18 <gpio_vSetState+0x4d2>
+     d16:	9a c0       	rjmp	.+308    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL6);
+     d18:	eb e0       	ldi	r30, 0x0B	; 11
+     d1a:	f1 e0       	ldi	r31, 0x01	; 1
+     d1c:	80 81       	ld	r24, Z
+     d1e:	80 64       	ori	r24, 0x40	; 64
+     d20:	80 83       	st	Z, r24
+     d22:	08 95       	ret
+			break;
+		break;
+		
+		//set pin44
+		case 44 :
+		if(u8Value == 0)
+     d24:	61 11       	cpse	r22, r1
+     d26:	06 c0       	rjmp	.+12     	; 0xd34 <gpio_vSetState+0x4ee>
+			PORTL &= ~(1 << PE5);
+     d28:	eb e0       	ldi	r30, 0x0B	; 11
+     d2a:	f1 e0       	ldi	r31, 0x01	; 1
+     d2c:	80 81       	ld	r24, Z
+     d2e:	8f 7d       	andi	r24, 0xDF	; 223
+     d30:	80 83       	st	Z, r24
+     d32:	08 95       	ret
+		else if(u8Value == 1)
+     d34:	61 30       	cpi	r22, 0x01	; 1
+     d36:	09 f0       	breq	.+2      	; 0xd3a <gpio_vSetState+0x4f4>
+     d38:	89 c0       	rjmp	.+274    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PE5);
+     d3a:	eb e0       	ldi	r30, 0x0B	; 11
+     d3c:	f1 e0       	ldi	r31, 0x01	; 1
+     d3e:	80 81       	ld	r24, Z
+     d40:	80 62       	ori	r24, 0x20	; 32
+     d42:	80 83       	st	Z, r24
+     d44:	08 95       	ret
+			break;
+		break;
+		
+		//set pin45
+		case 45 :
+		if(u8Value == 0)
+     d46:	61 11       	cpse	r22, r1
+     d48:	06 c0       	rjmp	.+12     	; 0xd56 <gpio_vSetState+0x510>
+			PORTL &= ~(1 << PL4);
+     d4a:	eb e0       	ldi	r30, 0x0B	; 11
+     d4c:	f1 e0       	ldi	r31, 0x01	; 1
+     d4e:	80 81       	ld	r24, Z
+     d50:	8f 7e       	andi	r24, 0xEF	; 239
+     d52:	80 83       	st	Z, r24
+     d54:	08 95       	ret
+		else if(u8Value == 1)
+     d56:	61 30       	cpi	r22, 0x01	; 1
+     d58:	09 f0       	breq	.+2      	; 0xd5c <gpio_vSetState+0x516>
+     d5a:	78 c0       	rjmp	.+240    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL4);
+     d5c:	eb e0       	ldi	r30, 0x0B	; 11
+     d5e:	f1 e0       	ldi	r31, 0x01	; 1
+     d60:	80 81       	ld	r24, Z
+     d62:	80 61       	ori	r24, 0x10	; 16
+     d64:	80 83       	st	Z, r24
+     d66:	08 95       	ret
+			break;
+		break;
+		
+		//set pin46
+		case 46 :
+		if(u8Value == 0)
+     d68:	61 11       	cpse	r22, r1
+     d6a:	06 c0       	rjmp	.+12     	; 0xd78 <gpio_vSetState+0x532>
+			PORTL &= ~(1 << PL3);
+     d6c:	eb e0       	ldi	r30, 0x0B	; 11
+     d6e:	f1 e0       	ldi	r31, 0x01	; 1
+     d70:	80 81       	ld	r24, Z
+     d72:	87 7f       	andi	r24, 0xF7	; 247
+     d74:	80 83       	st	Z, r24
+     d76:	08 95       	ret
+		else if(u8Value == 1)
+     d78:	61 30       	cpi	r22, 0x01	; 1
+     d7a:	09 f0       	breq	.+2      	; 0xd7e <gpio_vSetState+0x538>
+     d7c:	67 c0       	rjmp	.+206    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL3);
+     d7e:	eb e0       	ldi	r30, 0x0B	; 11
+     d80:	f1 e0       	ldi	r31, 0x01	; 1
+     d82:	80 81       	ld	r24, Z
+     d84:	88 60       	ori	r24, 0x08	; 8
+     d86:	80 83       	st	Z, r24
+     d88:	08 95       	ret
+			break;
+		break;
+		
+		//set pin47
+		case 47 :
+		if(u8Value == 0)
+     d8a:	61 11       	cpse	r22, r1
+     d8c:	06 c0       	rjmp	.+12     	; 0xd9a <gpio_vSetState+0x554>
+			PORTL &= ~(1 << PL2);
+     d8e:	eb e0       	ldi	r30, 0x0B	; 11
+     d90:	f1 e0       	ldi	r31, 0x01	; 1
+     d92:	80 81       	ld	r24, Z
+     d94:	8b 7f       	andi	r24, 0xFB	; 251
+     d96:	80 83       	st	Z, r24
+     d98:	08 95       	ret
+		else if(u8Value == 1)
+     d9a:	61 30       	cpi	r22, 0x01	; 1
+     d9c:	09 f0       	breq	.+2      	; 0xda0 <gpio_vSetState+0x55a>
+     d9e:	56 c0       	rjmp	.+172    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL2);
+     da0:	eb e0       	ldi	r30, 0x0B	; 11
+     da2:	f1 e0       	ldi	r31, 0x01	; 1
+     da4:	80 81       	ld	r24, Z
+     da6:	84 60       	ori	r24, 0x04	; 4
+     da8:	80 83       	st	Z, r24
+     daa:	08 95       	ret
+			break;
+		break;
+		
+		//set pin48
+		case 48 :
+		if(u8Value == 0)
+     dac:	61 11       	cpse	r22, r1
+     dae:	06 c0       	rjmp	.+12     	; 0xdbc <gpio_vSetState+0x576>
+			PORTL &= ~(1 << PL1);
+     db0:	eb e0       	ldi	r30, 0x0B	; 11
+     db2:	f1 e0       	ldi	r31, 0x01	; 1
+     db4:	80 81       	ld	r24, Z
+     db6:	8d 7f       	andi	r24, 0xFD	; 253
+     db8:	80 83       	st	Z, r24
+     dba:	08 95       	ret
+		else if(u8Value == 1)
+     dbc:	61 30       	cpi	r22, 0x01	; 1
+     dbe:	09 f0       	breq	.+2      	; 0xdc2 <gpio_vSetState+0x57c>
+     dc0:	45 c0       	rjmp	.+138    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL1);
+     dc2:	eb e0       	ldi	r30, 0x0B	; 11
+     dc4:	f1 e0       	ldi	r31, 0x01	; 1
+     dc6:	80 81       	ld	r24, Z
+     dc8:	82 60       	ori	r24, 0x02	; 2
+     dca:	80 83       	st	Z, r24
+     dcc:	08 95       	ret
+			break;
+		break;
+		
+		//set pin49
+		case 49 :
+		if(u8Value == 0)
+     dce:	61 11       	cpse	r22, r1
+     dd0:	06 c0       	rjmp	.+12     	; 0xdde <gpio_vSetState+0x598>
+			PORTL &= ~(1 << PL0);
+     dd2:	eb e0       	ldi	r30, 0x0B	; 11
+     dd4:	f1 e0       	ldi	r31, 0x01	; 1
+     dd6:	80 81       	ld	r24, Z
+     dd8:	8e 7f       	andi	r24, 0xFE	; 254
+     dda:	80 83       	st	Z, r24
+     ddc:	08 95       	ret
+		else if(u8Value == 1)
+     dde:	61 30       	cpi	r22, 0x01	; 1
+     de0:	a9 f5       	brne	.+106    	; 0xe4c <gpio_vSetState+0x606>
+			PORTL |= (1 << PL0);
+     de2:	eb e0       	ldi	r30, 0x0B	; 11
+     de4:	f1 e0       	ldi	r31, 0x01	; 1
+     de6:	80 81       	ld	r24, Z
+     de8:	81 60       	ori	r24, 0x01	; 1
+     dea:	80 83       	st	Z, r24
+     dec:	08 95       	ret
+			break;
+		break;
+		
+		//set pin50
+		case 50 :
+		if(u8Value == 0)
+     dee:	61 11       	cpse	r22, r1
+     df0:	04 c0       	rjmp	.+8      	; 0xdfa <gpio_vSetState+0x5b4>
+			PORTB &= ~(1 << PB3);
+     df2:	85 b1       	in	r24, 0x05	; 5
+     df4:	87 7f       	andi	r24, 0xF7	; 247
+     df6:	85 b9       	out	0x05, r24	; 5
+     df8:	08 95       	ret
+		else if(u8Value == 1)
+     dfa:	61 30       	cpi	r22, 0x01	; 1
+     dfc:	39 f5       	brne	.+78     	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB3);
+     dfe:	85 b1       	in	r24, 0x05	; 5
+     e00:	88 60       	ori	r24, 0x08	; 8
+     e02:	85 b9       	out	0x05, r24	; 5
+     e04:	08 95       	ret
+			break;
+		break;
+		
+		//set pin51
+		case 51 :
+		if(u8Value == 0)
+     e06:	61 11       	cpse	r22, r1
+     e08:	04 c0       	rjmp	.+8      	; 0xe12 <gpio_vSetState+0x5cc>
+			PORTB &= ~(1 << PB2);
+     e0a:	85 b1       	in	r24, 0x05	; 5
+     e0c:	8b 7f       	andi	r24, 0xFB	; 251
+     e0e:	85 b9       	out	0x05, r24	; 5
+     e10:	08 95       	ret
+		else if(u8Value == 1)
+     e12:	61 30       	cpi	r22, 0x01	; 1
+     e14:	d9 f4       	brne	.+54     	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB2);
+     e16:	85 b1       	in	r24, 0x05	; 5
+     e18:	84 60       	ori	r24, 0x04	; 4
+     e1a:	85 b9       	out	0x05, r24	; 5
+     e1c:	08 95       	ret
+			break;
+		break;
+		
+		//set pin52
+		case 52 :
+		if(u8Value == 0)
+     e1e:	61 11       	cpse	r22, r1
+     e20:	04 c0       	rjmp	.+8      	; 0xe2a <gpio_vSetState+0x5e4>
+			PORTB &= ~(1 << PB1);
+     e22:	85 b1       	in	r24, 0x05	; 5
+     e24:	8d 7f       	andi	r24, 0xFD	; 253
+     e26:	85 b9       	out	0x05, r24	; 5
+     e28:	08 95       	ret
+		else if(u8Value == 1)
+     e2a:	61 30       	cpi	r22, 0x01	; 1
+     e2c:	79 f4       	brne	.+30     	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB1);
+     e2e:	85 b1       	in	r24, 0x05	; 5
+     e30:	82 60       	ori	r24, 0x02	; 2
+     e32:	85 b9       	out	0x05, r24	; 5
+     e34:	08 95       	ret
+			break;
+		break;
+		
+		//set pin53
+		case 53 :
+		if(u8Value == 0)
+     e36:	61 11       	cpse	r22, r1
+     e38:	04 c0       	rjmp	.+8      	; 0xe42 <gpio_vSetState+0x5fc>
+			PORTB &= ~(1 << PB0);
+     e3a:	85 b1       	in	r24, 0x05	; 5
+     e3c:	8e 7f       	andi	r24, 0xFE	; 254
+     e3e:	85 b9       	out	0x05, r24	; 5
+     e40:	08 95       	ret
+		else if(u8Value == 1)
+     e42:	61 30       	cpi	r22, 0x01	; 1
+     e44:	19 f4       	brne	.+6      	; 0xe4c <gpio_vSetState+0x606>
+			PORTB |= (1 << PB0);
+     e46:	85 b1       	in	r24, 0x05	; 5
+     e48:	81 60       	ori	r24, 0x01	; 1
+     e4a:	85 b9       	out	0x05, r24	; 5
+     e4c:	08 95       	ret
+
+00000e4e <gpio_u8ReadState>:
+	}
+}
+
+uint8_t gpio_u8ReadState(uint8_t u8Pin){
+		
+	switch(u8Pin){
+     e4e:	90 e0       	ldi	r25, 0x00	; 0
+     e50:	86 33       	cpi	r24, 0x36	; 54
+     e52:	91 05       	cpc	r25, r1
+     e54:	08 f0       	brcs	.+2      	; 0xe58 <gpio_u8ReadState+0xa>
+     e56:	b7 c0       	rjmp	.+366    	; 0xfc6 <gpio_u8ReadState+0x178>
+     e58:	fc 01       	movw	r30, r24
+     e5a:	88 27       	eor	r24, r24
+     e5c:	e2 52       	subi	r30, 0x22	; 34
+     e5e:	ff 4f       	sbci	r31, 0xFF	; 255
+     e60:	8f 4f       	sbci	r24, 0xFF	; 255
+     e62:	38 c1       	rjmp	.+624    	; 0x10d4 <__tablejump2__>
+		//read pin0
+		case 0 :	
+			return PINE & (1 << PE0);
+     e64:	8c b1       	in	r24, 0x0c	; 12
+     e66:	81 70       	andi	r24, 0x01	; 1
+     e68:	08 95       	ret
+		break;
+		
+		//read pin1
+		case 1 :
+			return PINE & (1 << PE1);
+     e6a:	8c b1       	in	r24, 0x0c	; 12
+     e6c:	82 70       	andi	r24, 0x02	; 2
+     e6e:	08 95       	ret
+		break;
+		
+		//read pin2
+		case 2 :
+			return PINE & (1 << PE4);
+     e70:	8c b1       	in	r24, 0x0c	; 12
+     e72:	80 71       	andi	r24, 0x10	; 16
+     e74:	08 95       	ret
+		break;
+		
+		//read pin3
+		case 3 :
+			return PINE & (1 << PE5);
+     e76:	8c b1       	in	r24, 0x0c	; 12
+     e78:	80 72       	andi	r24, 0x20	; 32
+     e7a:	08 95       	ret
+		break;
+		
+		//read pin4
+		case 4 :
+			return PING & (1 << PG5);
+     e7c:	82 b3       	in	r24, 0x12	; 18
+     e7e:	80 72       	andi	r24, 0x20	; 32
+     e80:	08 95       	ret
+		break;
+		
+		//read pin5
+		case 5 :
+			return PINE & (1 << PE3);
+     e82:	8c b1       	in	r24, 0x0c	; 12
+     e84:	88 70       	andi	r24, 0x08	; 8
+     e86:	08 95       	ret
+		break;
+		
+		//read pin6
+		case 6 :
+			return PINH & (1 << PH3);
+     e88:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     e8c:	88 70       	andi	r24, 0x08	; 8
+     e8e:	08 95       	ret
+		break;
+		
+		//read pin7
+		case 7 :
+			return PINH & (1 << PH4);
+     e90:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     e94:	80 71       	andi	r24, 0x10	; 16
+     e96:	08 95       	ret
+		break;
+		
+		//read pin8
+		case 8 :
+			return PINH & (1 << PH5);
+     e98:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     e9c:	80 72       	andi	r24, 0x20	; 32
+     e9e:	08 95       	ret
+		break;
+		
+		//read pin9
+		case 9 :
+			return PINH & (1 << PH6);
+     ea0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     ea4:	80 74       	andi	r24, 0x40	; 64
+     ea6:	08 95       	ret
+		break;
+		
+		//read pin10
+		case 10 :
+			return PINB & (1 << PB4);
+     ea8:	83 b1       	in	r24, 0x03	; 3
+     eaa:	80 71       	andi	r24, 0x10	; 16
+     eac:	08 95       	ret
+		break;
+		
+		//read pin11
+		case 11 :
+			return PINB & (1 << PB5);
+     eae:	83 b1       	in	r24, 0x03	; 3
+     eb0:	80 72       	andi	r24, 0x20	; 32
+     eb2:	08 95       	ret
+		break;
+		
+		//read pin12
+		case 12 :
+			return PINB & (1 << PB6);
+     eb4:	83 b1       	in	r24, 0x03	; 3
+     eb6:	80 74       	andi	r24, 0x40	; 64
+     eb8:	08 95       	ret
+		break;
+		
+		//read pin13
+		case 13 :
+			return PINB & (1 << PB7);
+     eba:	83 b1       	in	r24, 0x03	; 3
+     ebc:	80 78       	andi	r24, 0x80	; 128
+     ebe:	08 95       	ret
+		break;
+		
+		//read pin14
+		case 14 :
+			return PINJ & (1 << PJ1);
+     ec0:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <__TEXT_REGION_LENGTH__+0x7c0103>
+     ec4:	82 70       	andi	r24, 0x02	; 2
+     ec6:	08 95       	ret
+		break;
+		
+		//read pin15
+		case 15 :
+			return PINJ & (1 << PJ0);
+     ec8:	80 91 03 01 	lds	r24, 0x0103	; 0x800103 <__TEXT_REGION_LENGTH__+0x7c0103>
+     ecc:	81 70       	andi	r24, 0x01	; 1
+     ece:	08 95       	ret
+		break;
+		
+		//read pin16
+		case 16 :
+		return PINH & (1 << PH1);
+     ed0:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     ed4:	82 70       	andi	r24, 0x02	; 2
+     ed6:	08 95       	ret
+		break;
+		
+		//read pin17
+		case 17 :
+			return PINH & (1 << PH0);
+     ed8:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__TEXT_REGION_LENGTH__+0x7c0100>
+     edc:	81 70       	andi	r24, 0x01	; 1
+     ede:	08 95       	ret
+		break;
+		
+		//read pin18
+		case 18 :
+			return PIND & (1 << PD3);
+     ee0:	89 b1       	in	r24, 0x09	; 9
+     ee2:	88 70       	andi	r24, 0x08	; 8
+     ee4:	08 95       	ret
+		break;
+		
+		//read pin19
+		case 19 :
+			return PIND & (1 << PD2);
+     ee6:	89 b1       	in	r24, 0x09	; 9
+     ee8:	84 70       	andi	r24, 0x04	; 4
+     eea:	08 95       	ret
+		break;
+		
+		//read pin20
+		case 20 :
+			return PIND & (1 << PD1);
+     eec:	89 b1       	in	r24, 0x09	; 9
+     eee:	82 70       	andi	r24, 0x02	; 2
+     ef0:	08 95       	ret
+		break;
+		
+		//read pin21
+		case 21 :
+			return PIND & (1 << PD0);
+     ef2:	89 b1       	in	r24, 0x09	; 9
+     ef4:	81 70       	andi	r24, 0x01	; 1
+     ef6:	08 95       	ret
+		break;
+		
+		//read pin22
+		case 22 :
+			return PINA & (1 << PA0);
+     ef8:	80 b1       	in	r24, 0x00	; 0
+     efa:	81 70       	andi	r24, 0x01	; 1
+     efc:	08 95       	ret
+		break;
+		
+		//read pin23
+		case 23 :
+			return PINA & (1 << PA1);
+     efe:	80 b1       	in	r24, 0x00	; 0
+     f00:	82 70       	andi	r24, 0x02	; 2
+     f02:	08 95       	ret
+		break;
+		
+		//set pin24
+		case 24 :
+			return PINA & (1 << PA2);
+     f04:	80 b1       	in	r24, 0x00	; 0
+     f06:	84 70       	andi	r24, 0x04	; 4
+     f08:	08 95       	ret
+		break;
+		
+		//read pin25
+		case 25 :
+			return PINA & (1 << PA3);
+     f0a:	80 b1       	in	r24, 0x00	; 0
+     f0c:	88 70       	andi	r24, 0x08	; 8
+     f0e:	08 95       	ret
+		break;
+		
+		//read pin26
+		case 26 :
+			return PINA & (1 << PA4);
+     f10:	80 b1       	in	r24, 0x00	; 0
+     f12:	80 71       	andi	r24, 0x10	; 16
+     f14:	08 95       	ret
+		break;
+		
+		//read pin27
+		case 27 :
+			return PINA & (1 << PA5);
+     f16:	80 b1       	in	r24, 0x00	; 0
+     f18:	80 72       	andi	r24, 0x20	; 32
+     f1a:	08 95       	ret
+		break;
+		
+		//read pin28
+		case 28 :
+			return PINA & (1 << PA6);
+     f1c:	80 b1       	in	r24, 0x00	; 0
+     f1e:	80 74       	andi	r24, 0x40	; 64
+     f20:	08 95       	ret
+		break;
+		
+		//read pin29
+		case 29 :
+			return PINA & (1 << PA7);
+     f22:	80 b1       	in	r24, 0x00	; 0
+     f24:	80 78       	andi	r24, 0x80	; 128
+     f26:	08 95       	ret
+		break;
+		
+		//read pin30
+		case 30 :
+			return PINC & (1 << PC7);
+     f28:	86 b1       	in	r24, 0x06	; 6
+     f2a:	80 78       	andi	r24, 0x80	; 128
+     f2c:	08 95       	ret
+		break;
+		
+		//read pin31
+		case 31 :
+			return PINC & (1 << PC6);
+     f2e:	86 b1       	in	r24, 0x06	; 6
+     f30:	80 74       	andi	r24, 0x40	; 64
+     f32:	08 95       	ret
+		break;
+		
+		//read pin32
+		case 32 :
+			return PINC & (1 << PC5);
+     f34:	86 b1       	in	r24, 0x06	; 6
+     f36:	80 72       	andi	r24, 0x20	; 32
+     f38:	08 95       	ret
+		break;
+		
+		//read pin33
+		case 33 :
+			return PINC & (1 << PC4);
+     f3a:	86 b1       	in	r24, 0x06	; 6
+     f3c:	80 71       	andi	r24, 0x10	; 16
+     f3e:	08 95       	ret
+		break;
+		
+		//read pin34
+		case 34 :
+			return PINC & (1 << PC3);
+     f40:	86 b1       	in	r24, 0x06	; 6
+     f42:	88 70       	andi	r24, 0x08	; 8
+     f44:	08 95       	ret
+		break;
+		
+		//read pin35
+		case 35 :
+			return PINC & (1 << PC2);
+     f46:	86 b1       	in	r24, 0x06	; 6
+     f48:	84 70       	andi	r24, 0x04	; 4
+     f4a:	08 95       	ret
+		break;
+		
+		//read pin36
+		case 36 :
+			return PINC & (1 << PC1);
+     f4c:	86 b1       	in	r24, 0x06	; 6
+     f4e:	82 70       	andi	r24, 0x02	; 2
+     f50:	08 95       	ret
+		break;
+		
+		//set pin37
+		case 37 :
+			return PINC & (1 << PC0);
+     f52:	86 b1       	in	r24, 0x06	; 6
+     f54:	81 70       	andi	r24, 0x01	; 1
+     f56:	08 95       	ret
+		break;
+		
+		//read pin38
+		case 38 :
+			return PIND & (1 << PD7);
+     f58:	89 b1       	in	r24, 0x09	; 9
+     f5a:	80 78       	andi	r24, 0x80	; 128
+     f5c:	08 95       	ret
+		break;
+		
+		//read pin39
+		case 39 :
+			return PING & (1 << PG2);
+     f5e:	82 b3       	in	r24, 0x12	; 18
+     f60:	84 70       	andi	r24, 0x04	; 4
+     f62:	08 95       	ret
+		break;
+		
+		//read pin40
+		case 40 :
+			return PING & (1 << PG1);
+     f64:	82 b3       	in	r24, 0x12	; 18
+     f66:	82 70       	andi	r24, 0x02	; 2
+     f68:	08 95       	ret
+		break;
+		
+		//read pin41
+		case 41 :
+			return PING & (1 << PG0);
+     f6a:	82 b3       	in	r24, 0x12	; 18
+     f6c:	81 70       	andi	r24, 0x01	; 1
+     f6e:	08 95       	ret
+		break;
+		
+		//read pin42
+		case 42 :
+			return PINL & (1 << PL7);
+     f70:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     f74:	80 78       	andi	r24, 0x80	; 128
+     f76:	08 95       	ret
+		break;
+		
+		//read pin43
+		case 43 :
+			return PINL & (1 << PL6);
+     f78:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     f7c:	80 74       	andi	r24, 0x40	; 64
+     f7e:	08 95       	ret
+		break;
+		
+		//read pin44
+		case 44 :
+			return PINE & (1 << PE5);
+     f80:	8c b1       	in	r24, 0x0c	; 12
+     f82:	80 72       	andi	r24, 0x20	; 32
+     f84:	08 95       	ret
+		break;
+		
+		//read pin45
+		case 45 :
+			return PINL & (1 << PL4);
+     f86:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     f8a:	80 71       	andi	r24, 0x10	; 16
+     f8c:	08 95       	ret
+		break;
+		
+		//read pin46
+		case 46 :
+			return PINL & (1 << PL3);
+     f8e:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     f92:	88 70       	andi	r24, 0x08	; 8
+     f94:	08 95       	ret
+		break;
+		
+		//read pin47
+		case 47 :
+			return PINL & (1 << PL2);
+     f96:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     f9a:	84 70       	andi	r24, 0x04	; 4
+     f9c:	08 95       	ret
+		break;
+		
+		//read pin48
+		case 48 :
+			return PINL & (1 << PL1);
+     f9e:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     fa2:	82 70       	andi	r24, 0x02	; 2
+     fa4:	08 95       	ret
+		break;
+		
+		//read pin49
+		case 49 :
+			return PINL & (1 << PL0);
+     fa6:	80 91 09 01 	lds	r24, 0x0109	; 0x800109 <__TEXT_REGION_LENGTH__+0x7c0109>
+     faa:	81 70       	andi	r24, 0x01	; 1
+     fac:	08 95       	ret
+		break;
+		
+		//read pin50
+		case 50 :
+			return PINB & (1 << PB3);
+     fae:	83 b1       	in	r24, 0x03	; 3
+     fb0:	88 70       	andi	r24, 0x08	; 8
+     fb2:	08 95       	ret
+		break;
+		
+		//read pin51
+		case 51 :
+			return PINB & (1 << PB2);
+     fb4:	83 b1       	in	r24, 0x03	; 3
+     fb6:	84 70       	andi	r24, 0x04	; 4
+     fb8:	08 95       	ret
+		break;
+		
+		//read pin52
+		case 52 :
+			return PINB & (1 << PB1);
+     fba:	83 b1       	in	r24, 0x03	; 3
+     fbc:	82 70       	andi	r24, 0x02	; 2
+     fbe:	08 95       	ret
+		break;
+		
+		//read pin53
+		case 53 :
+			return PINB & (1 << PB0);
+     fc0:	83 b1       	in	r24, 0x03	; 3
+     fc2:	81 70       	andi	r24, 0x01	; 1
+     fc4:	08 95       	ret
+		break;
+		
+		default :
+			return -1; //wrong pin
+     fc6:	8f ef       	ldi	r24, 0xFF	; 255
+		break;
+	}
+	
+	return -1;
+}
+     fc8:	08 95       	ret
+
+00000fca <gpio_vTestSetState>:
+
+void gpio_vTestSetState(uint8_t u8pinIn, uint8_t u8PinOut, uint8_t u8PinTest){
+     fca:	cf 93       	push	r28
+     fcc:	df 93       	push	r29
+     fce:	c6 2f       	mov	r28, r22
+     fd0:	d4 2f       	mov	r29, r20
+	uint8_t u8ReadValue;
+	gpio_vPinMode(u8pinIn, 0);
+     fd2:	60 e0       	ldi	r22, 0x00	; 0
+     fd4:	34 d9       	rcall	.-3480   	; 0x23e <gpio_vPinMode>
+	gpio_vPinMode(u8PinOut, 1);
+     fd6:	61 e0       	ldi	r22, 0x01	; 1
+     fd8:	8c 2f       	mov	r24, r28
+     fda:	31 d9       	rcall	.-3486   	; 0x23e <gpio_vPinMode>
+	gpio_vPinMode(u8PinTest, 1);
+     fdc:	61 e0       	ldi	r22, 0x01	; 1
+     fde:	8d 2f       	mov	r24, r29
+     fe0:	2e d9       	rcall	.-3492   	; 0x23e <gpio_vPinMode>
+	gpio_vSetState(u8PinOut,1);
+     fe2:	61 e0       	ldi	r22, 0x01	; 1
+     fe4:	8c 2f       	mov	r24, r28
+     fe6:	2f dc       	rcall	.-1954   	; 0x846 <gpio_vSetState>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+     fe8:	2f ef       	ldi	r18, 0xFF	; 255
+     fea:	31 ee       	ldi	r19, 0xE1	; 225
+     fec:	84 e0       	ldi	r24, 0x04	; 4
+     fee:	21 50       	subi	r18, 0x01	; 1
+     ff0:	30 40       	sbci	r19, 0x00	; 0
+     ff2:	80 40       	sbci	r24, 0x00	; 0
+     ff4:	e1 f7       	brne	.-8      	; 0xfee <gpio_vTestSetState+0x24>
+     ff6:	00 c0       	rjmp	.+0      	; 0xff8 <gpio_vTestSetState+0x2e>
+     ff8:	00 00       	nop
+	_delay_ms(100);
+	u8ReadValue = gpio_u8ReadState(u8PinOut);
+     ffa:	8c 2f       	mov	r24, r28
+     ffc:	28 df       	rcall	.-432    	; 0xe4e <gpio_u8ReadState>
+     ffe:	9f ef       	ldi	r25, 0xFF	; 255
+    1000:	21 ee       	ldi	r18, 0xE1	; 225
+    1002:	34 e0       	ldi	r19, 0x04	; 4
+    1004:	91 50       	subi	r25, 0x01	; 1
+    1006:	20 40       	sbci	r18, 0x00	; 0
+    1008:	30 40       	sbci	r19, 0x00	; 0
+    100a:	e1 f7       	brne	.-8      	; 0x1004 <__EEPROM_REGION_LENGTH__+0x4>
+    100c:	00 c0       	rjmp	.+0      	; 0x100e <__EEPROM_REGION_LENGTH__+0xe>
+    100e:	00 00       	nop
+	_delay_ms(100);
+	if(u8ReadValue > 0){
+    1010:	88 23       	and	r24, r24
+    1012:	69 f0       	breq	.+26     	; 0x102e <__EEPROM_REGION_LENGTH__+0x2e>
+		gpio_vSetState(u8PinTest,1);
+    1014:	61 e0       	ldi	r22, 0x01	; 1
+    1016:	8d 2f       	mov	r24, r29
+    1018:	16 dc       	rcall	.-2004   	; 0x846 <gpio_vSetState>
+    101a:	8f ef       	ldi	r24, 0xFF	; 255
+    101c:	91 ee       	ldi	r25, 0xE1	; 225
+    101e:	24 e0       	ldi	r18, 0x04	; 4
+    1020:	81 50       	subi	r24, 0x01	; 1
+    1022:	90 40       	sbci	r25, 0x00	; 0
+    1024:	20 40       	sbci	r18, 0x00	; 0
+    1026:	e1 f7       	brne	.-8      	; 0x1020 <__EEPROM_REGION_LENGTH__+0x20>
+    1028:	00 c0       	rjmp	.+0      	; 0x102a <__EEPROM_REGION_LENGTH__+0x2a>
+    102a:	00 00       	nop
+    102c:	0e c0       	rjmp	.+28     	; 0x104a <__EEPROM_REGION_LENGTH__+0x4a>
+		_delay_ms(100);	
+	}
+	else if(u8ReadValue == 0){
+    102e:	81 11       	cpse	r24, r1
+		gpio_vSetState(u8PinTest,0);
+    1030:	0c c0       	rjmp	.+24     	; 0x104a <__EEPROM_REGION_LENGTH__+0x4a>
+    1032:	60 e0       	ldi	r22, 0x00	; 0
+    1034:	8d 2f       	mov	r24, r29
+    1036:	07 dc       	rcall	.-2034   	; 0x846 <gpio_vSetState>
+    1038:	3f ef       	ldi	r19, 0xFF	; 255
+    103a:	81 ee       	ldi	r24, 0xE1	; 225
+    103c:	94 e0       	ldi	r25, 0x04	; 4
+    103e:	31 50       	subi	r19, 0x01	; 1
+    1040:	80 40       	sbci	r24, 0x00	; 0
+    1042:	90 40       	sbci	r25, 0x00	; 0
+    1044:	e1 f7       	brne	.-8      	; 0x103e <__EEPROM_REGION_LENGTH__+0x3e>
+    1046:	00 c0       	rjmp	.+0      	; 0x1048 <__EEPROM_REGION_LENGTH__+0x48>
+		_delay_ms(100);
+	}
+	gpio_vSetState(u8PinOut,0);
+    1048:	00 00       	nop
+    104a:	60 e0       	ldi	r22, 0x00	; 0
+    104c:	8c 2f       	mov	r24, r28
+    104e:	fb db       	rcall	.-2058   	; 0x846 <gpio_vSetState>
+    1050:	2f ef       	ldi	r18, 0xFF	; 255
+    1052:	31 ee       	ldi	r19, 0xE1	; 225
+    1054:	84 e0       	ldi	r24, 0x04	; 4
+    1056:	21 50       	subi	r18, 0x01	; 1
+    1058:	30 40       	sbci	r19, 0x00	; 0
+    105a:	80 40       	sbci	r24, 0x00	; 0
+    105c:	e1 f7       	brne	.-8      	; 0x1056 <__EEPROM_REGION_LENGTH__+0x56>
+    105e:	00 c0       	rjmp	.+0      	; 0x1060 <__EEPROM_REGION_LENGTH__+0x60>
+	_delay_ms(100);
+	u8ReadValue = gpio_u8ReadState(u8PinOut);
+    1060:	00 00       	nop
+    1062:	8c 2f       	mov	r24, r28
+    1064:	f4 de       	rcall	.-536    	; 0xe4e <gpio_u8ReadState>
+    1066:	9f ef       	ldi	r25, 0xFF	; 255
+    1068:	21 ee       	ldi	r18, 0xE1	; 225
+    106a:	34 e0       	ldi	r19, 0x04	; 4
+    106c:	91 50       	subi	r25, 0x01	; 1
+    106e:	20 40       	sbci	r18, 0x00	; 0
+    1070:	30 40       	sbci	r19, 0x00	; 0
+    1072:	e1 f7       	brne	.-8      	; 0x106c <__EEPROM_REGION_LENGTH__+0x6c>
+    1074:	00 c0       	rjmp	.+0      	; 0x1076 <__EEPROM_REGION_LENGTH__+0x76>
+	_delay_ms(100);
+	if(u8ReadValue > 0){
+    1076:	00 00       	nop
+    1078:	88 23       	and	r24, r24
+		gpio_vSetState(u8PinTest,1);
+    107a:	69 f0       	breq	.+26     	; 0x1096 <__EEPROM_REGION_LENGTH__+0x96>
+    107c:	61 e0       	ldi	r22, 0x01	; 1
+    107e:	8d 2f       	mov	r24, r29
+    1080:	e2 db       	rcall	.-2108   	; 0x846 <gpio_vSetState>
+    1082:	8f ef       	ldi	r24, 0xFF	; 255
+    1084:	91 ee       	ldi	r25, 0xE1	; 225
+    1086:	24 e0       	ldi	r18, 0x04	; 4
+    1088:	81 50       	subi	r24, 0x01	; 1
+    108a:	90 40       	sbci	r25, 0x00	; 0
+    108c:	20 40       	sbci	r18, 0x00	; 0
+    108e:	e1 f7       	brne	.-8      	; 0x1088 <__EEPROM_REGION_LENGTH__+0x88>
+    1090:	00 c0       	rjmp	.+0      	; 0x1092 <__EEPROM_REGION_LENGTH__+0x92>
+    1092:	00 00       	nop
+		_delay_ms(100);
+	}
+	else if(u8ReadValue == 0){
+    1094:	0e c0       	rjmp	.+28     	; 0x10b2 <__EEPROM_REGION_LENGTH__+0xb2>
+    1096:	81 11       	cpse	r24, r1
+		gpio_vSetState(u8PinTest,0);
+    1098:	0c c0       	rjmp	.+24     	; 0x10b2 <__EEPROM_REGION_LENGTH__+0xb2>
+    109a:	60 e0       	ldi	r22, 0x00	; 0
+    109c:	8d 2f       	mov	r24, r29
+    109e:	d3 db       	rcall	.-2138   	; 0x846 <gpio_vSetState>
+    10a0:	3f ef       	ldi	r19, 0xFF	; 255
+    10a2:	81 ee       	ldi	r24, 0xE1	; 225
+    10a4:	94 e0       	ldi	r25, 0x04	; 4
+    10a6:	31 50       	subi	r19, 0x01	; 1
+    10a8:	80 40       	sbci	r24, 0x00	; 0
+    10aa:	90 40       	sbci	r25, 0x00	; 0
+    10ac:	e1 f7       	brne	.-8      	; 0x10a6 <__EEPROM_REGION_LENGTH__+0xa6>
+    10ae:	00 c0       	rjmp	.+0      	; 0x10b0 <__EEPROM_REGION_LENGTH__+0xb0>
+    10b0:	00 00       	nop
+    10b2:	2f ef       	ldi	r18, 0xFF	; 255
+    10b4:	31 ee       	ldi	r19, 0xE1	; 225
+    10b6:	84 e0       	ldi	r24, 0x04	; 4
+    10b8:	21 50       	subi	r18, 0x01	; 1
+    10ba:	30 40       	sbci	r19, 0x00	; 0
+    10bc:	80 40       	sbci	r24, 0x00	; 0
+    10be:	e1 f7       	brne	.-8      	; 0x10b8 <__EEPROM_REGION_LENGTH__+0xb8>
+    10c0:	00 c0       	rjmp	.+0      	; 0x10c2 <__EEPROM_REGION_LENGTH__+0xc2>
+    10c2:	00 00       	nop
+		_delay_ms(100);
+	}
+	_delay_ms(100);
+}
+    10c4:	df 91       	pop	r29
+    10c6:	cf 91       	pop	r28
+    10c8:	08 95       	ret
+
+000010ca <main>:
+{
+    /* Replace with your application code */
+
+    while (1) 
+    {
+		gpio_vTestSetState(2,3,53);	
+    10ca:	45 e3       	ldi	r20, 0x35	; 53
+    10cc:	63 e0       	ldi	r22, 0x03	; 3
+    10ce:	82 e0       	ldi	r24, 0x02	; 2
+    10d0:	7c df       	rcall	.-264    	; 0xfca <gpio_vTestSetState>
+    10d2:	fb cf       	rjmp	.-10     	; 0x10ca <main>
+
+000010d4 <__tablejump2__>:
+    10d4:	ee 0f       	add	r30, r30
+    10d6:	ff 1f       	adc	r31, r31
+    10d8:	88 1f       	adc	r24, r24
+    10da:	8b bf       	out	0x3b, r24	; 59
+    10dc:	07 90       	elpm	r0, Z+
+    10de:	f6 91       	elpm	r31, Z
+    10e0:	e0 2d       	mov	r30, r0
+    10e2:	19 94       	eijmp
+
+000010e4 <_exit>:
+    10e4:	f8 94       	cli
+
+000010e6 <__stop_program>:
+    10e6:	ff cf       	rjmp	.-2      	; 0x10e6 <__stop_program>
